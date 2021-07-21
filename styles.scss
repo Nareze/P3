@@ -1,0 +1,55 @@
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+
+$bg-footer:rgba(0, 0, 0, 0.750);
+$color-footer:#FFF;
+
+$font-text:"Roboto";
+$font-title:"Shrikhand";
+
+
+
+
+body, html{
+    margin: 0;
+}
+
+
+.header_banner{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+    height: 50px;
+}
+}
+
+
+.footer_about{
+    height: 200px;
+    background-color: $bg-footer;
+    color: $color-footer;
+    font-family: $font-text;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    ul{
+        list-style-type: none;
+    }
+    li:first-child{
+        font-family: $font-title;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    li:not(:first-child){
+        margin-bottom: 5px;
+    }
+    .fas{
+        font-size: 15px;
+        margin-right: 10px;
+    }
+}
+
+
