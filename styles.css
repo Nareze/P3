@@ -13,10 +13,18 @@ body, html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .header_banner img {
   height: 50px;
+}
+
+.header_banner a {
+  position: absolute;
+  left: 50px;
+  font-size: 35px;
+  color: inherit;
 }
 
 .footer_about {
