@@ -1,9 +1,28 @@
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url(/polices/Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(/polices/Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url(/polices/Roboto-Bold.ttf);
+}
+
 body, html {
   margin: 0;
 }
 
 .header_banner {
-  height: 100px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,10 +33,12 @@ body, html {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  -webkit-box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.3);
+          box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.3);
 }
 
 .header_banner img {
-  height: 50px;
+  height: 25px;
 }
 
 .header_banner a {
@@ -27,11 +48,83 @@ body, html {
   color: inherit;
 }
 
+.nav_location {
+  height: 45px;
+  background-color: rgba(128, 128, 128, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav_location h4 {
+  font-weight: normal;
+  font-family: "Roboto-Medium";
+}
+
+.nav_location .fas {
+  margin-right: 15px;
+  margin-bottom: 3px;
+}
+
+.nav_booking {
+  height: 300px;
+  background-color: rgba(128, 128, 128, 0.075);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav_booking h2 {
+  margin-top: -10px;
+  text-align: center;
+  font-family: "Roboto-Bold";
+}
+
+.nav_booking p {
+  margin-top: -5px;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Roboto-Light";
+}
+
+.nav_booking button {
+  margin-top: 20px;
+  font-family: "Roboto-Medium";
+  width: 240px;
+  font-size: 18px;
+  padding: 18px;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #b960fe;
+  background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
+}
+
+.article_operation {
+  height: 450px;
+}
+
 .footer_about {
   height: 200px;
   background-color: rgba(0, 0, 0, 0.75);
   color: #FFF;
-  font-family: "Roboto";
   font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,6 +146,7 @@ body, html {
 
 .footer_about li:not(:first-child) {
   margin-bottom: 5px;
+  font-family: "Roboto-Medium";
 }
 
 .footer_about .fas {
