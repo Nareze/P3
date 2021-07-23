@@ -117,7 +117,11 @@ body, html {
   background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
 }
 
-.choose {
+#article__title {
+  margin-left: 25px;
+}
+
+.card {
   height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,7 +135,7 @@ body, html {
           flex-direction: column;
 }
 
-.choose .choose__restaurant {
+.card .card__restaurant {
   -webkit-box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.15);
           box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.15);
   font-family: "Roboto-Medium";
@@ -141,6 +145,33 @@ body, html {
   border-radius: 20px;
   margin-bottom: 10px;
   text-align: center;
+  position: relative;
+}
+
+.card .card__restaurant .card__number {
+  position: absolute;
+  left: -10px;
+  top: 23px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  line-height: 22px;
+  /* centre le numero dans le cerlce */
+  height: 22px;
+  width: 22px;
+  color: #fff;
+}
+
+.card .card__restaurant .card__item {
+  position: absolute;
+  left: 50px;
+}
+
+.card .card__restaurant .fa-store {
+  color: #9356DC;
+}
+
+.card div:last-child {
+  background-color: #9256dc1f;
 }
 
 .footer_about {
