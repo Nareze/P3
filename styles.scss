@@ -18,13 +18,13 @@
 
 
 
+
 @mixin flex_center($flex,$horizontal_center,$vertical_center,$column){
     display: $flex;
     justify-content: $horizontal_center;
     align-items: $vertical_center;
     flex-direction: $column;
 }
-
 @mixin number_circle{
     position: absolute;
     left: -10px;
@@ -35,7 +35,6 @@
     width: 22px;
     color: #fff;
 }
-
 @mixin card__choose{
     box-shadow: 2px 2px 4px $bg-location;
     font-family: $font-text-medium;
@@ -48,7 +47,6 @@
     position: relative;
     height: 75px;
 }
-
 @mixin booking_button{
     font-family: $font-text-medium;
     width: 240px;
@@ -71,6 +69,7 @@ body, html{
 }
 
 
+
 .banner{
     height: 60px;
     @include flex_center(flex,center,center,"");
@@ -84,6 +83,9 @@ body, html{
         left: 50px;
         font-size: 35px;
         color: inherit;
+    }
+    .banner__icon{
+        font-size: 15px;
     }
 }
 
@@ -101,6 +103,26 @@ body, html{
         margin-bottom: 3px;
     }
 }
+
+
+
+
+.nav__pic{
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu{
+    position: relative;
+    bottom: 150px;
+    height: 1200px;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    border-radius: 50px 50px 0px 0px;
+}
+
+
 
 
 .booking{
@@ -166,6 +188,10 @@ body, html{
     height: 1225px;
     background-color: $bg-booking;
     @include flex_center(flex,"",center,column);
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
     .restaurant__title{
         font-family: $font-text-bold;
         width: 86%;
@@ -223,7 +249,9 @@ body, html{
 
 
 
-
+.about--shift{
+    margin-top: -150px;
+}
 
 
 
