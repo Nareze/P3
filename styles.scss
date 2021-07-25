@@ -59,6 +59,23 @@
     background: rgb(185,96,254);
     background: linear-gradient(354deg, rgba(185,96,254,1) 25%, rgba(222,96,254,1) 50%, rgba(240,88,254,1) 75%, rgba(255,76,246,1) 100%);
 }
+@mixin restaurant__new{
+    padding: 6px 10px 6px 10px;
+    position: absolute;
+    bottom: 82%;
+    right: 4%;
+    background-color: $color-tertiary;
+    color: green;
+    border-radius: 2px;
+    font-family: $font-text-medium;
+    font-size: 15px;
+}
+@mixin menu__position{
+    position: relative;
+    bottom: 150px;
+    width: 100%;
+    border-radius: 50px 50px 0px 0px;
+}
 
 
 
@@ -107,20 +124,8 @@ body, html{
 
 
 
-.nav__pic{
-    height: 700px;
-    width: 100%;
-    object-fit: cover;
-}
 
-.menu{
-    position: relative;
-    bottom: 150px;
-    height: 1200px;
-    width: 100%;
-    background-color: rgb(240, 240, 240);
-    border-radius: 50px 50px 0px 0px;
-}
+
 
 
 
@@ -152,8 +157,8 @@ body, html{
     @include flex_center(flex,"",center,column);
     margin-bottom: 45px;
     .card__title{
-        font-family: $font-text-bold;
         width: 86%;
+        font-family: $font-text-bold;
         display: flex;
         justify-content:flex-start;
         margin-top: 33px;
@@ -201,7 +206,7 @@ body, html{
     }
     .restaurant__location{
         height: 250px;
-        width: 85%;
+        width: 425px;
         background-color: #fff;
         border-radius: 25px 25px;
         position: relative;
@@ -230,19 +235,35 @@ body, html{
             font-size: 25px;
         }
         .restaurant__new{
-            padding: 6px 10px 6px 10px;
-            position: absolute;
-            bottom: 82%;
-            right: 4%;
-            background-color: $color-tertiary;
-            color: green;
-            border-radius: 2px;
-            font-family: $font-text-medium;
-            font-size: 15px;
+            @include restaurant__new;
         }
     }
 }
 
+
+.nav__pic{
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.menu{
+    @include menu__position;
+    @include flex_center(flex,"",center,column);
+    height: 1200px;
+    background-color: rgb(240, 240, 240);
+    .menu__desc{
+        background-color: #fff;
+        padding: 1px 5px 1px 5px;
+        margin-bottom: 15px;
+        border-radius: 15px;
+        width: 425px;
+    }
+    .menu__commander{
+        @include booking_button;
+    }
+}
 
 
 

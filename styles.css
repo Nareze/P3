@@ -84,22 +84,6 @@ body, html {
   margin-bottom: 3px;
 }
 
-.nav__pic {
-  height: 700px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.menu {
-  position: relative;
-  bottom: 150px;
-  height: 1200px;
-  width: 100%;
-  background-color: #f0f0f0;
-  border-radius: 50px 50px 0px 0px;
-}
-
 .booking {
   height: 300px;
   display: -webkit-box;
@@ -164,8 +148,8 @@ body, html {
 }
 
 .card .card__title {
-  font-family: "Roboto-Bold";
   width: 86%;
+  font-family: "Roboto-Bold";
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,7 +249,7 @@ body, html {
 
 .restaurant .restaurant__location {
   height: 250px;
-  width: 85%;
+  width: 425px;
   background-color: #fff;
   border-radius: 25px 25px;
   position: relative;
@@ -310,6 +294,56 @@ body, html {
   border-radius: 2px;
   font-family: "Roboto-Medium";
   font-size: 15px;
+}
+
+.nav__pic {
+  height: 700px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  position: relative;
+  bottom: 150px;
+  width: 100%;
+  border-radius: 50px 50px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: "";
+      -ms-flex-pack: "";
+          justify-content: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 1200px;
+  background-color: #f0f0f0;
+}
+
+.menu .menu__desc {
+  background-color: #fff;
+  padding: 1px 5px 1px 5px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  width: 425px;
+}
+
+.menu .menu__commander {
+  font-family: "Roboto-Medium";
+  width: 240px;
+  font-size: 18px;
+  padding: 18px;
+  border-radius: 30px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background: #b960fe;
+  background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
 }
 
 .about--shift {
