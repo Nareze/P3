@@ -30,7 +30,7 @@
     line-height: 22px;
     height: 22px;
     width: 22px;
-    color: map-get($color-mods, white);
+    color: #fff;
 }
 @mixin card__choose{
     box-shadow: 2px 2px 4px $bg-location;
@@ -51,7 +51,7 @@
     padding: 18px;
     border-radius: 30px;
     border: none;
-    color: map-get($color-mods, white);
+    color: #fff;
     cursor: pointer;
     background: rgb(185,96,254);
     background: linear-gradient(354deg, rgba(185,96,254,1) 25%, rgba(222,96,254,1) 50%, rgba(240,88,254,1) 75%, rgba(255,76,246,1) 100%);
@@ -190,7 +190,7 @@ body, html{
     }
     .restaurant__location{
         @include margin(5%);
-        background-color: map-get($color-mods, white);
+        background-color: #fff;
         border-radius: 25px 25px;
         margin-bottom: 20px;
         position: relative;
@@ -234,7 +234,7 @@ body, html{
     .about__list{
         list-style-type: none;
         font-size: 20px;
-        color: $color-footer;
+        color: #fff;
         li:first-child{
             font-family: $font-title;
             font-weight: bold;
@@ -277,6 +277,8 @@ body, html{
 }
 
 
+
+
 .menu{
     height: 1300px;
     background-color: rgb(240, 240, 240);
@@ -301,11 +303,18 @@ body, html{
             margin-right: 90%;
         }
         .menu__desc{   
-            background-color: map-get($color-mods, white);
+            background-color: #fff;
             height: 70px;
             border-radius: 15px;
             margin-bottom: 5px;
             position: relative;
+            animation: menu_loading $anim-dur forwards ease-in-out;
+            opacity: 0;
+            @for $i from 1 to 10 {
+                &--#{$i}{
+                    animation-delay: $anim-delay*$i;
+                }
+            }
             span{
                 position: absolute;
                 right: 2%;
@@ -325,6 +334,7 @@ body, html{
                 font-family: $font-text-light;
             }
         }
+
         .menu__commander{
             margin-top: 50px;
             @include flex_center(flex, center, "","" );    /* flex sur bouton */
@@ -334,6 +344,20 @@ body, html{
         }
     }
 }
+
+
+@keyframes menu_loading {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
 
 
 .about--shift{

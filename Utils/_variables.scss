@@ -1,14 +1,11 @@
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
-$color-footer:#FFF;
-
 
 $color-mods:(
     purple:$color-primary,
     pink:$color-secondary,
     green:$color-tertiary,
-    white:$color-footer,
 );
 
 
@@ -17,10 +14,11 @@ $bg-booking:rgba(128, 128, 128, 0.075);
 $bg-footer:rgba(0, 0, 0, 0.750);
 
 
-
 $font-text-light:"Roboto-Light";
 $font-text-medium:"Roboto-Medium";
 $font-text-bold:"Roboto-Bold";
-
-
 $font-title:"Shrikhand";
+
+
+$anim-dur: 500ms;
+$anim-delay: $anim-dur / 5;

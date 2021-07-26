@@ -114,7 +114,7 @@ body, html {
   padding: 18px;
   border-radius: 30px;
   border: none;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   background: #b960fe;
   background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
@@ -181,7 +181,7 @@ body, html {
   line-height: 22px;
   height: 22px;
   width: 22px;
-  color: #FFF;
+  color: #fff;
 }
 
 .card .card__restaurant .card__icon {
@@ -230,7 +230,7 @@ body, html {
 .restaurant .restaurant__location {
   margin-left: 5%;
   margin-right: 5%;
-  background-color: #FFF;
+  background-color: #fff;
   border-radius: 25px 25px;
   margin-bottom: 20px;
   position: relative;
@@ -298,7 +298,7 @@ body, html {
 .about .about__list {
   list-style-type: none;
   font-size: 20px;
-  color: #FFF;
+  color: #fff;
 }
 
 .about .about__list li:first-child {
@@ -372,11 +372,59 @@ body, html {
 }
 
 .menu .menu__card .menu__desc {
-  background-color: #FFF;
+  background-color: #fff;
   height: 70px;
   border-radius: 15px;
   margin-bottom: 5px;
   position: relative;
+  -webkit-animation: menu_loading 500ms forwards ease-in-out;
+          animation: menu_loading 500ms forwards ease-in-out;
+  opacity: 0;
+}
+
+.menu .menu__card .menu__desc--1 {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.menu .menu__card .menu__desc--2 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+
+.menu .menu__card .menu__desc--3 {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.menu .menu__card .menu__desc--4 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+
+.menu .menu__card .menu__desc--5 {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.menu .menu__card .menu__desc--6 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.menu .menu__card .menu__desc--7 {
+  -webkit-animation-delay: 700ms;
+          animation-delay: 700ms;
+}
+
+.menu .menu__card .menu__desc--8 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms;
+}
+
+.menu .menu__card .menu__desc--9 {
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
 }
 
 .menu .menu__card .menu__desc span {
@@ -425,10 +473,28 @@ body, html {
   padding: 18px;
   border-radius: 30px;
   border: none;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   background: #b960fe;
   background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
+}
+
+@-webkit-keyframes menu_loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes menu_loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .about--shift {
