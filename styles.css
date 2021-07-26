@@ -21,6 +21,7 @@ body, html {
   margin: 0;
 }
 
+/* HEADER */
 .banner {
   height: 60px;
   display: -webkit-box;
@@ -45,6 +46,7 @@ body, html {
   height: 25px;
 }
 
+/* NAV */
 .location {
   height: 45px;
   display: -webkit-box;
@@ -112,12 +114,13 @@ body, html {
   padding: 18px;
   border-radius: 30px;
   border: none;
-  color: #fff;
+  color: #FFF;
   cursor: pointer;
   background: #b960fe;
   background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
 }
 
+/* ARTICLE */
 .card {
   height: 440px;
   display: -webkit-box;
@@ -178,16 +181,16 @@ body, html {
   line-height: 22px;
   height: 22px;
   width: 22px;
-  color: #fff;
+  color: #FFF;
 }
 
-.card .card__restaurant .card__item {
+.card .card__restaurant .card__icon {
   position: absolute;
   left: 50px;
   color: grey;
 }
 
-.card .card__restaurant .cart__item--store {
+.card .card__restaurant .cart__icon--store {
   color: #9356DC;
 }
 
@@ -227,7 +230,7 @@ body, html {
 .restaurant .restaurant__location {
   margin-left: 5%;
   margin-right: 5%;
-  background-color: #fff;
+  background-color: #FFF;
   border-radius: 25px 25px;
   margin-bottom: 20px;
   position: relative;
@@ -273,6 +276,7 @@ body, html {
   font-family: "Roboto-Light";
 }
 
+/* FOOTER */
 .about {
   height: 200px;
   background-color: rgba(0, 0, 0, 0.75);
@@ -368,7 +372,7 @@ body, html {
 }
 
 .menu .menu__card .menu__desc {
-  background-color: #fff;
+  background-color: #FFF;
   height: 70px;
   border-radius: 15px;
   margin-bottom: 5px;
@@ -421,7 +425,7 @@ body, html {
   padding: 18px;
   border-radius: 30px;
   border: none;
-  color: #fff;
+  color: #FFF;
   cursor: pointer;
   background: #b960fe;
   background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
