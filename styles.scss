@@ -16,9 +16,6 @@
 }
 
 
-
-
-
 @mixin flex_center($flex,$horizontal_center,$vertical_center,$column){
     display: $flex;
     justify-content: $horizontal_center;
@@ -75,8 +72,12 @@
     bottom: 150px;
     width: 100%;
     border-radius: 50px 50px 0px 0px;
+    padding-top: 20px;
 }
-
+@mixin margin($percent){
+    margin-left: $percent;
+    margin-right: $percent;
+}
 
 
 
@@ -86,7 +87,6 @@ body, html{
 }
 
 
-
 .banner{
     height: 60px;
     @include flex_center(flex,center,center,"");
@@ -94,15 +94,6 @@ body, html{
     box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.300);
     .banner__img{
         height: 25px;
-    }
-    .banner__return{
-        position: absolute;
-        left: 50px;
-        font-size: 35px;
-        color: inherit;
-    }
-    .banner__icon{
-        font-size: 15px;
     }
 }
 
@@ -149,10 +140,8 @@ body, html{
     @include flex_center(flex,"",center,column);
     margin-bottom: 45px;
     .card__title{
-        width: 86%;
         font-family: $font-text-bold;
-        display: flex;
-        justify-content:flex-start;
+        width: 86%;
         margin-top: 33px;
         margin-bottom: 10px
     }
@@ -177,10 +166,6 @@ body, html{
 }
 
 
-
-
-
-
 .restaurant{
     height: 1225px;
     background-color: $bg-booking;
@@ -192,34 +177,14 @@ body, html{
     .restaurant__title{
         font-family: $font-text-bold;
         width: 86%;
-        display: flex;
-        justify-content:flex-start;
         margin-top: 53px;
     }
     .restaurant__location{
-        height: 250px;
-        width: 425px;
+        @include margin(5%);
         background-color: #fff;
         border-radius: 25px 25px;
-        position: relative;
         margin-bottom: 20px;
-        .restaurant__img{
-        height: 175px;
-        width: 100%;
-        border-radius: 25px 25px 0 0;
         position: relative;
-        object-fit: cover;
-        }
-        h4{
-        margin-top: 12px;
-        margin-left: 12px;
-        font-family: $font-text-bold;
-        }
-        p{
-            margin-top: -14px;
-            padding-left: 12px;
-            font-family: $font-text-light;
-        }
         .restaurant__heart{
             position: absolute;
             left: 85%;
@@ -229,107 +194,35 @@ body, html{
         .restaurant__new{
             @include restaurant__new;
         }
+        .restaurant__img{
+            height: 175px;
+            width: 100%;
+            border-radius: 25px 25px 0 0;
+            position: relative;
+            object-fit: cover;
+        }
+        h4{
+            margin-top: 12px;
+            margin-left: 12px;
+            font-family: $font-text-bold;
+        }
+        p{
+            margin-top: -14px;
+            padding-left: 12px;
+            font-family: $font-text-light;
+        }
     }
 }
-
-
-
-
-
-
-.nav__pic{
-    height: 700px;
-    width: 100%;
-    object-fit: cover;
-}
-
-
-
-.menu{
-    height: 1300px;
-    background-color: rgb(240, 240, 240);
-    @include menu__position;
-    padding-top: 20px;
-    .menu__card{
-    margin-left: 5%;
-    margin-right: 5%;
-    position: relative;
-        .far{
-        position: absolute;
-        right: 5%;
-        }
-        .menu__location{
-        font-family: $font-title;
-        margin-right: 215px;
-        margin-bottom: 30px;
-        }
-        .menu__title{
-        font-family: $font-text-light;
-        margin-bottom: 25px;
-        margin-top: 45px;
-        margin-right: 90%;
-        }
-        .menu__desc{
-        background-color: #fff;
-        width: 100%;
-        height: 70px;
-        border-radius: 15px;
-        margin-bottom: 5px;
-        position: relative;
-            h4{
-                margin-top: 15px;
-                margin-left: 7px;
-                padding-top: 15px;
-                margin-left: 7px;
-                font-family: $font-text-light;
-            }
-            p{
-                margin-top: -15px;
-                margin-left: 7px;
-                margin-top: -15px;
-                margin-left: 7px;
-                font-family: $font-text-light;
-                font-size: 15px;
-            }
-            span{
-                position: absolute;
-                right: 2%;
-            }
-        }
-        .menu__commander{
-            margin-top: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;                        /* flex sur bouton */
-            .menu__button{
-                @include booking_button;
-            }
-        }
-}
-}
-
-
-
-
-.about--shift{
-    margin-top: -150px;
-}
-
-
 
 
 .about{
     height: 200px;
     background-color: $bg-footer;
-    color: $color-footer;
-    font-size: 20px;
     @include flex_center(flex,"",center,"");
-    .about__icon{
-        font-size: 15px;
-        margin-right: 10px;
-    }
     .about__list{
         list-style-type: none;
+        font-size: 20px;
+        color: $color-footer;
         li:first-child{
             font-family: $font-title;
             font-weight: bold;
@@ -339,7 +232,101 @@ body, html{
             margin-bottom: 5px;
             font-family: $font-text-medium;
         }
+        .about__icon{
+            font-size: 15px;
+            margin-right: 10px;
+        }
     }
 }
+
+
+
+
+/* PAGES ANNEXES */
+
+
+.banner__return{
+    position: absolute;
+    left: 50px;
+    font-size: 35px;
+    color: inherit;
+}
+.banner__icon{
+    font-size: 15px;
+}
+
+
+.nav__pic{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.menu{
+    height: 1300px;
+    background-color: rgb(240, 240, 240);
+    @include menu__position;
+    .menu__card{
+        @include margin(5%);
+        position: relative;
+        .far{
+            position: absolute;
+            right: 5%;
+        }
+        .menu__location{
+            font-family: $font-title;
+            margin-right: 215px;
+            margin-bottom: 30px;
+        }
+        .menu__title{
+            text-transform: uppercase;
+            font-size: 15px;
+            font-family: $font-text-light;
+            margin-top: 45px;
+            margin-right: 90%;
+        }
+        .menu__desc{
+            background-color: #fff;
+            height: 70px;
+            border-radius: 15px;
+            margin-bottom: 5px;
+            position: relative;
+            span{
+                position: absolute;
+                right: 2%;
+                font-weight: bold;
+            }
+            h4{
+                margin-top: 15px;
+                margin-left: 7px;
+                padding-top: 15px;
+                font-family: $font-text-light;
+            }
+            p{
+                margin-top: -15px;
+                margin-left: 7px;
+                margin-top: -15px;
+                font-size: 15px;
+                font-family: $font-text-light;
+            }
+        }
+        .menu__commander{
+            margin-top: 50px;
+            @include flex_center(flex, center, "","" );    /* flex sur bouton */
+            .menu__button{
+                @include booking_button;
+            }
+        }
+    }
+}
+
+
+.about--shift{
+    margin-top: -150px;
+}
+
+
+
 
 
