@@ -352,15 +352,15 @@ body, html {
   position: relative;
 }
 
-.menu .menu__card .far {
-  position: absolute;
-  right: 5%;
-}
-
 .menu .menu__card .menu__location {
   font-family: "Shrikhand";
   margin-right: 215px;
   margin-bottom: 30px;
+}
+
+.menu .menu__card .menu__location .menu__heart {
+  position: absolute;
+  right: 5%;
 }
 
 .menu .menu__card .menu__title {
@@ -373,12 +373,13 @@ body, html {
 
 .menu .menu__card .menu__desc {
   background-color: #fff;
-  height: 70px;
+  padding: 12px 0px 12px 10px;
   border-radius: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   position: relative;
-  -webkit-animation: menu_loading 500ms forwards ease-in-out;
-          animation: menu_loading 500ms forwards ease-in-out;
+  width: 100%;
+  -webkit-animation: menu_fade 500ms forwards ease-in-out;
+          animation: menu_fade 500ms forwards ease-in-out;
   opacity: 0;
 }
 
@@ -427,24 +428,54 @@ body, html {
           animation-delay: 900ms;
 }
 
-.menu .menu__card .menu__desc span {
-  position: absolute;
-  right: 2%;
+.menu .menu__card .menu__desc .menu__text {
+  cursor: pointer;
+}
+
+.menu .menu__card .menu__desc .menu__text:hover + .menu__slide {
+  opacity: 1;
+  -webkit-animation: expand 500ms ease-in-out forwards;
+          animation: expand 500ms ease-in-out forwards;
+}
+
+.menu .menu__card .menu__desc .menu__text:hover + .menu__slide .menu__spin {
+  -webkit-animation: spin1 500ms ease-in-out;
+          animation: spin1 500ms ease-in-out;
+}
+
+.menu .menu__card .menu__desc .menu__text .menu__price {
   font-weight: bold;
+  position: absolute;
+  left: 77%;
 }
 
-.menu .menu__card .menu__desc h4 {
-  margin-top: 15px;
-  margin-left: 7px;
-  padding-top: 15px;
+.menu .menu__card .menu__desc .menu__slide {
+  opacity: 0;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  border-radius: 0px 15px 15px 0px;
+  width: 60px;
+  background-color: #99E2D0;
+}
+
+.menu .menu__card .menu__desc .menu__slide .menu__spin {
+  margin-top: 25px;
+  margin-left: 17px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.menu .menu__card .menu__desc .menu__text--title {
   font-family: "Roboto-Light";
+  margin-bottom: 5px;
+  margin-top: 0px;
 }
 
-.menu .menu__card .menu__desc p {
-  margin-top: -15px;
-  margin-left: 7px;
-  margin-top: -15px;
-  font-size: 15px;
+.menu .menu__card .menu__desc .menu__text--desc {
   font-family: "Roboto-Light";
 }
 
@@ -463,7 +494,6 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: "";
           flex-direction: "";
-  /* flex sur bouton */
 }
 
 .menu .menu__card .menu__commander .menu__button {
@@ -479,7 +509,7 @@ body, html {
   background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
 }
 
-@-webkit-keyframes menu_loading {
+@-webkit-keyframes menu_fade {
   0% {
     opacity: 0;
   }
@@ -488,12 +518,56 @@ body, html {
   }
 }
 
-@keyframes menu_loading {
+@keyframes menu_fade {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes expand {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes expand {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 
