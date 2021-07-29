@@ -121,6 +121,7 @@ body, html {
 }
 
 .booking .booking__button:hover {
+  /* APPLIQUE OMBRE ET LUMIERE SUR BOUTTONS */
   -webkit-box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
@@ -205,6 +206,7 @@ body, html {
 
 .card .card__restaurant:hover {
   cursor: pointer;
+  /* APPLIQUE OMBRE ET LUMIERE SUR BOUTTONS */
   -webkit-box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
@@ -265,15 +267,17 @@ body, html {
 
 .restaurant .restaurant__location .restaurant__heart:hover:before {
   font-weight: 900;
-  -webkit-background-clip: text;
+  background-position: bottom;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* CIBLE L'INTERIEUR DE L'ICONE */
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #9356DC), color-stop(50%, transparent));
   background-image: linear-gradient(to top, #9356DC 50%, transparent 50%);
-  background-position: top;
+  /* PERMET DE REMPLIR LE BOUTON DE BAS EN HAUT */
+  background-size: 100% 200%;
+  /* DONNE UNE TAILLE AUX DEUX COULEURS */
   -webkit-transition: background-position 0.5s ease-in-out;
   transition: background-position 0.5s ease-in-out;
-  background-size: 100% 200%;
-  background-position: bottom;
 }
 
 .restaurant .restaurant__location .restaurant__new {
@@ -310,6 +314,7 @@ body, html {
 }
 
 .restaurant .restaurant__location:hover {
+  /* APPLIQUE OMBRE ET LUMIERE SUR BOUTTONS */
   -webkit-box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
@@ -371,11 +376,14 @@ body, html {
 /* LOADING SPINNER */
 .overlay {
   position: fixed;
+  /* NON AFFECTE PAR LE SCROLLING DE LA PAGE */
   z-index: 5;
+  /* LE POSITIONNE EN PREMIER PLAN */
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  /* CENTRE LE LOADER AU MILIEU DE LA PAGE */
 }
 
 .loader {
@@ -402,6 +410,7 @@ body, html {
     position: absolute;
     right: 99999px;
   }
+  /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
 }
 
 @keyframes spin {
@@ -416,6 +425,7 @@ body, html {
     position: absolute;
     right: 99999px;
   }
+  /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
 }
 
 /* PAGES ANNEXES */
@@ -506,6 +516,15 @@ article .menu .menu__card .menu__desc {
   -webkit-animation: menu_fade 500ms forwards ease-in-out;
           animation: menu_fade 500ms forwards ease-in-out;
   opacity: 0;
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
 }
 
 article .menu .menu__card .menu__desc--1 {
@@ -558,6 +577,7 @@ article .menu .menu__card .menu__desc .menu__text {
 }
 
 article .menu .menu__card .menu__desc .menu__text:hover + .menu__slide {
+  /* SELECTIONNE LA DIV ADJACENTE (VOISIN DIRECT) POUR APPLIQUER L'ANIMATION */
   opacity: 1;
   -webkit-animation: expand 500ms ease-in-out forwards;
           animation: expand 500ms ease-in-out forwards;
@@ -605,6 +625,7 @@ article .menu .menu__card .menu__desc .menu__text--desc {
 }
 
 article .menu .menu__card .menu__desc:hover {
+  /* APPLIQUE OMBRE ET LUMIERE SUR BOUTTONS */
   -webkit-box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
@@ -644,6 +665,7 @@ article .menu .menu__card .menu__commander .menu__button {
 }
 
 article .menu .menu__card .menu__commander .menu__button:hover {
+  /* APPLIQUE OMBRE ET LUMIERE SUR BOUTTONS */
   -webkit-box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
