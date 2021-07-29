@@ -208,13 +208,23 @@ body, html{
         border-radius: 25px 25px;
         margin-bottom: 20px;
         position: relative;
+
         .restaurant__heart{
             position: absolute;
-            z-index: 11;
             left: 85%;
             bottom: 15%;
             font-size: 25px;
-            &:hover{
+            cursor: pointer;
+
+            &:hover:before{
+                font-weight: 900;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: linear-gradient(to top, $color-primary 50%, transparent 50%);
+                background-position: top;
+                transition: background-position 0.5s ease-in-out;
+                background-size: 100% 200%;
+                background-position: bottom;
             }
         }
         .restaurant__new{
@@ -357,6 +367,18 @@ article{
                 .menu__heart{
                     position: absolute;
                     right: 5%;
+                    cursor: pointer;
+
+                    &:hover:before{
+                        font-weight: 900;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-image: linear-gradient(to top, $color-primary 50%, transparent 50%);
+                        background-position: top;
+                        transition: background-position 0.5s ease-in-out;
+                        background-size: 100% 200%;
+                        background-position: bottom;
+                    }
                 }
             }
             .menu__title{

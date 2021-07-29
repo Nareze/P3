@@ -257,10 +257,23 @@ body, html {
 
 .restaurant .restaurant__location .restaurant__heart {
   position: absolute;
-  z-index: 11;
   left: 85%;
   bottom: 15%;
   font-size: 25px;
+  cursor: pointer;
+}
+
+.restaurant .restaurant__location .restaurant__heart:hover:before {
+  font-weight: 900;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #9356DC), color-stop(50%, transparent));
+  background-image: linear-gradient(to top, #9356DC 50%, transparent 50%);
+  background-position: top;
+  -webkit-transition: background-position 0.5s ease-in-out;
+  transition: background-position 0.5s ease-in-out;
+  background-size: 100% 200%;
+  background-position: bottom;
 }
 
 .restaurant .restaurant__location .restaurant__new {
@@ -459,6 +472,20 @@ article .menu .menu__card .menu__location {
 article .menu .menu__card .menu__location .menu__heart {
   position: absolute;
   right: 5%;
+  cursor: pointer;
+}
+
+article .menu .menu__card .menu__location .menu__heart:hover:before {
+  font-weight: 900;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #9356DC), color-stop(50%, transparent));
+  background-image: linear-gradient(to top, #9356DC 50%, transparent 50%);
+  background-position: top;
+  -webkit-transition: background-position 0.5s ease-in-out;
+  transition: background-position 0.5s ease-in-out;
+  background-size: 100% 200%;
+  background-position: bottom;
 }
 
 article .menu .menu__card .menu__title {
