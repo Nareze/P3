@@ -475,7 +475,7 @@ article {
 article .menu {
   position: relative;
   bottom: 150px;
-  height: 1800px;
+  height: 1700px;
   width: 100%;
   border-radius: 50px 50px 0px 0px;
   padding-top: 20px;
@@ -528,16 +528,13 @@ article .menu .menu__card .menu__desc {
   overflow: hidden;
   /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
   background-color: #fff;
-  height: 75px;
-  padding: 10px 0px 15px 10px;
+  padding-left: 20px;
+  height: 100px;
   border-radius: 20px;
   margin-bottom: 20px;
   -webkit-box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.3);
           box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.3);
   cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   position: relative;
   -webkit-animation: menu_fade 500ms forwards ease-in-out;
           animation: menu_fade 500ms forwards ease-in-out;
@@ -622,6 +619,10 @@ article .menu .menu__card .menu__desc .menu__text:hover > .menu__text--desc {
   width: 250px;
 }
 
+article .menu .menu__card .menu__desc .menu__text:hover > .menu__text--title {
+  width: 250px;
+}
+
 article .menu .menu__card .menu__desc .menu__text .menu__price {
   opacity: 1;
   font-weight: bold;
@@ -655,6 +656,7 @@ article .menu .menu__card .menu__desc .menu__slide {
   -webkit-box-direction: normal;
       -ms-flex-direction: "";
           flex-direction: "";
+  overflow: hidden;
 }
 
 article .menu .menu__card .menu__desc .menu__slide .menu__spin {
@@ -667,17 +669,18 @@ article .menu .menu__card .menu__desc .menu__slide .menu__spin {
 article .menu .menu__card .menu__desc .menu__text--title {
   font-family: "Roboto-Light";
   font-size: 25px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  margin-left: 5px;
+  margin-top: 20px;
+  margin-bottom: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 article .menu .menu__card .menu__desc .menu__text--desc {
   -webkit-animation: text_ellipsis_out 500ms ease-in-out forwards;
           animation: text_ellipsis_out 500ms ease-in-out forwards;
-  font-family: "Roboto-Light";
   font-size: 20px;
-  margin-left: 5px;
+  font-family: "Roboto-Light";
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -818,7 +821,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   }
   to {
     height: 100%;
-    width: 100px;
+    width: 90px;
     border-radius: 0px;
   }
 }
@@ -831,7 +834,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   }
   to {
     height: 100%;
-    width: 100px;
+    width: 90px;
     border-radius: 0px;
   }
 }

@@ -96,7 +96,7 @@ $anim-delay: $anim-duration / 5;
 @mixin menu__position{
     position: relative;
     bottom: 150px;
-    height: 1800px;
+    height: 1700px;
     width: 100%;
     border-radius: 50px 50px 0px 0px;
     padding-top: 20px;
@@ -136,15 +136,12 @@ $anim-delay: $anim-duration / 5;
 }
 @mixin menu_desc_theme{
     background-color: #fff;
-    height: 75px;
-    padding: 10px 0px 15px 10px;
+    padding-left: 20px;
+    height: 100px;
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.300);
     cursor: pointer;
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
 }
 
 
@@ -479,7 +476,6 @@ article{
                         }
                     }
                 .menu__text{ 
-
                     &:hover > .menu__price{                                 /* SELECTIONNE UN ELEMENT ENFANT DE LA DIV */
                         animation: price_slide 500ms ease-in-out forwards;
                     }
@@ -492,6 +488,9 @@ article{
                         }
                     }
                     &:hover > .menu__text--desc{
+                        width: 250px;
+                    }
+                    &:hover > .menu__text--title{
                         width: 250px;
                     }
                     .menu__price{
@@ -508,6 +507,8 @@ article{
                     transform-origin: right;
                     @include menu_slide_theme;
                     @include flex_center(flex, center, center, "");
+
+                    overflow: hidden;
                     .menu__spin{
                         animation: icon_spin_out 500ms ease-in-out forwards;
                         font-size: 30px;
@@ -517,15 +518,16 @@ article{
                 .menu__text--title{
                     font-family: $font-text-light;
                     font-size: 25px;
-                    margin-bottom: 10px;
-                    margin-top: 10px;
-                    margin-left: 5px;
+                    margin-top: 20px;
+                    margin-bottom: 7px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 .menu__text--desc{
                     animation: text_ellipsis_out 500ms ease-in-out forwards;
-                    font-family: $font-text-light;
                     font-size: 20px;
-                    margin-left: 5px;
+                    font-family: $font-text-light;
                     display: inline-block;
                     white-space: nowrap;
                     overflow: hidden;
@@ -609,7 +611,7 @@ white-space: nowrap;
     }
     to{
         height: 100%;
-        width: 100px;
+        width: 90px;
         border-radius: 0px;
     }
 }
