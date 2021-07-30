@@ -107,6 +107,38 @@ $anim-delay: $anim-duration / 5;
     filter: brightness(110%);
     transition-duration: 250ms;
 }
+@mixin loader_border_theme{
+    border: 50px solid map-get($color-mods, purple);
+    border-right: 50px solid map-get($color-mods, pink);
+    border-bottom: 50px solid map-get($color-mods, purple);
+    border-left: 50px solid map-get($color-mods, pink);
+    border-radius: 50%;
+}
+@mixin heart_fill{
+    font-weight: 900;                                
+    background-position: bottom;                                             
+    -webkit-text-fill-color: transparent;     
+    -webkit-background-clip: text;                              /* CIBLE L'INTERIEUR DE L'ICONE */
+    background-image: linear-gradient(to top, $color-primary 50%, transparent 50%);          /* PERMET DE REMPLIR LE BOUTON DE BAS EN HAUT */
+    background-size: 100% 200%;                         /* DONNE UNE TAILLE AUX DEUX COULEURS */
+    transition: background-position 0.5s ease-in-out;
+}
+@mixin menu_slide_theme{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    width: 60px;
+    background-color: $color-tertiary;
+}
+@mixin menu_desc_theme{
+    background-color: #fff;
+    padding: 12px 0px 12px 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
 
 
 
@@ -116,7 +148,7 @@ body, html{
 }
 
 
-/* HEADER */
+/* HEADER *///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 .banner{
@@ -130,7 +162,7 @@ body, html{
 }
 
 
-/* NAV */
+/* NAV *///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 .location{
@@ -173,7 +205,7 @@ body, html{
 }
 
 
-/* ARTICLE */
+/* ARTICLE *///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 .card{
@@ -211,6 +243,7 @@ body, html{
 }
 
 
+
 .restaurant{
     height: 1225px;
     background-color: $bg-booking;
@@ -225,29 +258,20 @@ body, html{
         margin-top: 53px;
     }
     .restaurant__location{
-        @include margin(5%);
         background-color: #fff;
         border-radius: 25px 25px;
         margin-bottom: 20px;
         position: relative;
         width: 500px; 
-
         .restaurant__heart{
             position: absolute;
             left: 85%;
             bottom: 15%;
             font-size: 25px;
             cursor: pointer;
-
             &:hover:before{
-                font-weight: 900;                                
-                background-position: bottom;                                             
-                -webkit-text-fill-color: transparent;     
+                @include heart_fill;
 
-                -webkit-background-clip: text;                              /* CIBLE L'INTERIEUR DE L'ICONE */
-                background-image: linear-gradient(to top, $color-primary 50%, transparent 50%);          /* PERMET DE REMPLIR LE BOUTON DE BAS EN HAUT */
-                background-size: 100% 200%;                         /* DONNE UNE TAILLE AUX DEUX COULEURS */
-                transition: background-position 0.5s ease-in-out;
             }
         }
         .restaurant__new{
@@ -277,7 +301,7 @@ body, html{
 }
 
 
-/* FOOTER */
+/* FOOTER *///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 .about{
@@ -314,7 +338,7 @@ body, html{
 }
 
 
-/* LOADING SPINNER */
+/* LOADING SPINNER *///////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 .overlay {                                              
@@ -326,28 +350,28 @@ body, html{
 }
 
 .loader {
-    border: 50px solid #fff;
-    border-radius: 50%;
-    border-top: 50px solid $color-primary;
-    border-right: 50px solid $color-secondary;
-    border-bottom: 50px solid $color-tertiary;
+    @include loader_border_theme;
     width: 500px;
     height: 500px;
-    animation: spin 2s forwards;
+    animation: spin 3s forwards;
 }
+
 
 @keyframes spin {
     0% { transform: rotate(0deg);}
-    50% { transform: rotate(360deg); opacity: 0;}
-    100% { position: absolute; right: 99999px;}          /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
-  }
+    40% { transform: rotate(360deg); opacity: 0;}
+    100% { position: absolute; right: 99999px;}         /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
+}
 
 
 
 
-/* PAGES ANNEXES */
+/////////////////////////////////////////////////////////////* PAGES ANNEXES */////////////////////////////////////////////////
 
 
+
+
+/* HEADER */////////////////////////////////////////////////
 
 
 .banner__return{
@@ -364,12 +388,17 @@ body, html{
 }
 
 
+/* NAV */////////////////////////////////////////////////
+
+
 .nav__pic{
     height: 600px;
     width: 100%;
     object-fit: cover;
 }
 
+
+/* ARTICLE */////////////////////////////////////////////////
 
 
 article{
@@ -391,14 +420,7 @@ article{
                     cursor: pointer;
 
                     &:hover:before{
-                        font-weight: 900;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        background-image: linear-gradient(to top, $color-primary 50%, transparent 50%);
-                        background-position: top;
-                        transition: background-position 0.5s ease-in-out;
-                        background-size: 100% 200%;
-                        background-position: bottom;
+                        @include heart_fill;
                     }
                 }
             }
@@ -411,21 +433,15 @@ article{
             }
             .menu__desc{ 
                 overflow: hidden;                            /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
-                background-color: #fff;
-                cursor: pointer;
-                padding: 12px 0px 12px 10px;
-                border-radius: 15px;
-                margin-bottom: 10px;
+                @include menu_desc_theme;
                 position: relative;
-                width: 100%;
                 animation: menu_fade $anim-duration forwards ease-in-out;
                 opacity: 0;
-                @for $i from 1 to 10 {                                                  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-                    &--#{$i}{
-                        animation-delay: $anim-delay*$i;
+                    @for $i from 1 to 10 {                                                  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+                        &--#{$i}{
+                            animation-delay: $anim-delay*$i;
+                        }
                     }
-                }
-
                 .menu__text{
                     &:hover > .menu__price{                                 /* SELECTIONNE UN ELEMENT ENFANT DE LA DIV */
                         animation: price_slide 500ms ease-in-out forwards;
@@ -450,13 +466,7 @@ article{
                 .menu__slide{
                     animation: expand_out 500ms ease-in-out forwards;
                     transform-origin: right;
-                    position: absolute;
-                    right: 0%;
-                    top: 0%;
-                    bottom: 0%;
-                    border-radius: 15px;
-                    width: 60px;
-                    background-color: $color-tertiary;
+                    @include menu_slide_theme;
                 .menu__spin{
                     animation: icon_spin_out 500ms ease-in-out forwards;
                     margin-top: 25px;
@@ -493,11 +503,16 @@ article{
 }
 
 
+/* FOOTER *//////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
+.about--shift{
+    margin-top: -150px;
+}
 
 
+/* KEY FRAMES *//////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 @keyframes menu_fade {
@@ -570,10 +585,6 @@ article{
 
 
 
-
-.about--shift{
-    margin-top: -150px;
-}
 
 
 

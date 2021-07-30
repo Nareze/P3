@@ -249,8 +249,6 @@ body, html {
 }
 
 .restaurant .restaurant__location {
-  margin-left: 5%;
-  margin-right: 5%;
   background-color: #fff;
   border-radius: 25px 25px;
   margin-bottom: 20px;
@@ -388,15 +386,15 @@ body, html {
 }
 
 .loader {
-  border: 50px solid #fff;
-  border-radius: 50%;
-  border-top: 50px solid #9356DC;
+  border: 50px solid #9356DC;
   border-right: 50px solid #FF79DA;
-  border-bottom: 50px solid #99E2D0;
+  border-bottom: 50px solid #9356DC;
+  border-left: 50px solid #FF79DA;
+  border-radius: 50%;
   width: 500px;
   height: 500px;
-  -webkit-animation: spin 2s forwards;
-          animation: spin 2s forwards;
+  -webkit-animation: spin 3s forwards;
+          animation: spin 3s forwards;
 }
 
 @-webkit-keyframes spin {
@@ -404,7 +402,7 @@ body, html {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  50% {
+  40% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     opacity: 0;
@@ -421,7 +419,7 @@ body, html {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  50% {
+  40% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     opacity: 0;
@@ -433,7 +431,7 @@ body, html {
   /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
 }
 
-/* PAGES ANNEXES */
+/* HEADER */
 .banner__return {
   position: absolute;
   left: 50px;
@@ -450,6 +448,7 @@ body, html {
           filter: drop-shadow(5px 5px 5px black);
 }
 
+/* NAV */
 .nav__pic {
   height: 600px;
   width: 100%;
@@ -457,6 +456,7 @@ body, html {
      object-fit: cover;
 }
 
+/* ARTICLE */
 article {
   background-color: #f0f0f0;
 }
@@ -492,15 +492,17 @@ article .menu .menu__card .menu__location .menu__heart {
 
 article .menu .menu__card .menu__location .menu__heart:hover:before {
   font-weight: 900;
-  -webkit-background-clip: text;
+  background-position: bottom;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* CIBLE L'INTERIEUR DE L'ICONE */
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #9356DC), color-stop(50%, transparent));
   background-image: linear-gradient(to top, #9356DC 50%, transparent 50%);
-  background-position: top;
+  /* PERMET DE REMPLIR LE BOUTON DE BAS EN HAUT */
+  background-size: 100% 200%;
+  /* DONNE UNE TAILLE AUX DEUX COULEURS */
   -webkit-transition: background-position 0.5s ease-in-out;
   transition: background-position 0.5s ease-in-out;
-  background-size: 100% 200%;
-  background-position: bottom;
 }
 
 article .menu .menu__card .menu__title {
@@ -515,12 +517,11 @@ article .menu .menu__card .menu__desc {
   overflow: hidden;
   /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
   background-color: #fff;
-  cursor: pointer;
   padding: 12px 0px 12px 10px;
   border-radius: 15px;
   margin-bottom: 10px;
+  cursor: pointer;
   position: relative;
-  width: 100%;
   -webkit-animation: menu_fade 500ms forwards ease-in-out;
           animation: menu_fade 500ms forwards ease-in-out;
   opacity: 0;
@@ -616,7 +617,6 @@ article .menu .menu__card .menu__desc .menu__slide {
   right: 0%;
   top: 0%;
   bottom: 0%;
-  border-radius: 15px;
   width: 60px;
   background-color: #99E2D0;
 }
@@ -690,6 +690,12 @@ article .menu .menu__card .menu__commander .menu__button:hover {
           transition-duration: 250ms;
 }
 
+/* FOOTER */
+.about--shift {
+  margin-top: -150px;
+}
+
+/* KEY FRAMES */
 @-webkit-keyframes menu_fade {
   0% {
     opacity: 0;
@@ -698,7 +704,6 @@ article .menu .menu__card .menu__commander .menu__button:hover {
     opacity: 1;
   }
 }
-
 @keyframes menu_fade {
   0% {
     opacity: 0;
@@ -848,9 +853,5 @@ article .menu .menu__card .menu__commander .menu__button:hover {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-}
-
-.about--shift {
-  margin-top: -150px;
 }
 /*# sourceMappingURL=styles.css.map */
