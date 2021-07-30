@@ -23,7 +23,7 @@ body, html {
 
 /* HEADER */
 .banner {
-  height: 60px;
+  height: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,12 +43,12 @@ body, html {
 }
 
 .banner .banner__img {
-  height: 25px;
+  height: 60px;
 }
 
 /* NAV */
 .location {
-  height: 45px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,16 +67,18 @@ body, html {
 
 .location .location__title {
   font-weight: normal;
+  font-size: 30px;
   font-family: "Roboto-Medium";
 }
 
 .location .location__icone {
-  margin-right: 15px;
+  font-size: 25px;
+  margin-right: 25px;
   margin-bottom: 3px;
 }
 
 .booking {
-  height: 300px;
+  height: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,25 +96,26 @@ body, html {
 }
 
 .booking .booking__title {
-  margin-top: 35px;
+  font-size: 50px;
+  margin-top: 75px;
   text-align: center;
   font-family: "Roboto-Bold";
 }
 
 .booking .booking__desc {
-  padding-bottom: 6px;
-  margin-top: 3px;
+  font-size: 35px;
+  padding-bottom: 15px;
+  margin-top: -15px;
   text-align: center;
-  font-size: 20px;
   font-family: "Roboto-Light";
 }
 
 .booking .booking__button {
   font-family: "Roboto-Medium";
-  width: 240px;
-  font-size: 18px;
-  padding: 18px;
-  border-radius: 30px;
+  width: 400px;
+  font-size: 28px;
+  padding: 25px;
+  border-radius: 40px;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -132,7 +135,7 @@ body, html {
 
 /* ARTICLE */
 .card {
-  height: 440px;
+  height: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,24 +153,26 @@ body, html {
 }
 
 .card .card__title {
+  font-size: 30px;
   font-family: "Roboto-Bold";
   width: 86%;
-  margin-top: 33px;
-  margin-bottom: 10px;
+  margin-top: 43px;
+  margin-bottom: 20px;
 }
 
 .card .card__restaurant {
   -webkit-box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.15);
           box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.15);
   font-family: "Roboto-Medium";
+  font-size: 30px;
+  height: 100px;
   background-color: rgba(128, 128, 128, 0.075);
-  width: 80%;
+  width: 85%;
   padding: 25px;
-  border-radius: 30px;
-  margin-bottom: 20px;
+  border-radius: 50px;
+  margin-bottom: 40px;
   text-align: center;
   position: relative;
-  height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,12 +190,14 @@ body, html {
 
 .card .card__restaurant .card__number {
   position: absolute;
+  font-size: 25px;
   left: -10px;
   background-color: #9356DC;
   border-radius: 50%;
-  line-height: 22px;
-  height: 22px;
-  width: 22px;
+  line-height: 32px;
+  /* METS LE CHIFFRE A LA MEME HAUTEUR QUE LE CERCLE */
+  height: 32px;
+  width: 32px;
   color: #fff;
 }
 
@@ -220,7 +227,7 @@ body, html {
 }
 
 .restaurant {
-  height: 1225px;
+  height: 2200px;
   background-color: rgba(128, 128, 128, 0.075);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,23 +251,26 @@ body, html {
 
 .restaurant .restaurant__title {
   font-family: "Roboto-Bold";
-  width: 86%;
-  margin-top: 53px;
+  margin-top: 73px;
+  margin-bottom: 50px;
+  font-size: 40px;
+  width: 85%;
 }
 
 .restaurant .restaurant__location {
   background-color: #fff;
+  height: 440px;
   border-radius: 25px 25px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   position: relative;
-  width: 500px;
+  width: 85%;
 }
 
 .restaurant .restaurant__location .restaurant__heart {
   position: absolute;
   left: 85%;
-  bottom: 15%;
-  font-size: 25px;
+  bottom: 60px;
+  font-size: 30px;
   cursor: pointer;
 }
 
@@ -292,7 +302,7 @@ body, html {
 }
 
 .restaurant .restaurant__location .restaurant__img {
-  height: 175px;
+  height: 325px;
   width: 100%;
   border-radius: 25px 25px 0 0;
   position: relative;
@@ -301,13 +311,15 @@ body, html {
 }
 
 .restaurant .restaurant__location h4 {
+  font-size: 30px;
   margin-top: 12px;
   margin-left: 12px;
   font-family: "Roboto-Bold";
 }
 
 .restaurant .restaurant__location p {
-  margin-top: -14px;
+  font-size: 25px;
+  margin-top: -30px;
   padding-left: 12px;
   font-family: "Roboto-Light";
 }
@@ -324,7 +336,7 @@ body, html {
 
 /* FOOTER */
 .about {
-  height: 200px;
+  height: 400px;
   background-color: rgba(0, 0, 0, 0.75);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,24 +355,24 @@ body, html {
 
 .about .about__list {
   list-style-type: none;
-  font-size: 20px;
+  font-size: 40px;
   color: #fff;
 }
 
 .about .about__list li:first-child {
   font-family: "Shrikhand";
   font-weight: bold;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .about .about__list li:not(:first-child) {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-family: "Roboto-Medium";
 }
 
 .about .about__list .about__icon {
-  font-size: 15px;
-  margin-right: 10px;
+  font-size: 30px;
+  margin-right: 20px;
 }
 
 .about .about__list li:hover {
@@ -669,10 +681,10 @@ article .menu .menu__card .menu__commander {
 
 article .menu .menu__card .menu__commander .menu__button {
   font-family: "Roboto-Medium";
-  width: 240px;
-  font-size: 18px;
-  padding: 18px;
-  border-radius: 30px;
+  width: 400px;
+  font-size: 28px;
+  padding: 25px;
+  border-radius: 40px;
   border: none;
   color: #fff;
   cursor: pointer;
