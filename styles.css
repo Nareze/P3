@@ -255,6 +255,7 @@ body, html {
   border-radius: 25px 25px;
   margin-bottom: 20px;
   position: relative;
+  width: 500px;
 }
 
 .restaurant .restaurant__location .restaurant__heart {
@@ -403,10 +404,12 @@ body, html {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     opacity: 0;
+  }
+  100% {
     position: absolute;
     right: 99999px;
   }
@@ -418,10 +421,12 @@ body, html {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  100% {
+  50% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
     opacity: 0;
+  }
+  100% {
     position: absolute;
     right: 99999px;
   }
@@ -507,7 +512,10 @@ article .menu .menu__card .menu__title {
 }
 
 article .menu .menu__card .menu__desc {
+  overflow: hidden;
+  /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
   background-color: #fff;
+  cursor: pointer;
   padding: 12px 0px 12px 10px;
   border-radius: 15px;
   margin-bottom: 10px;
@@ -572,42 +580,50 @@ article .menu .menu__card .menu__desc--9 {
           animation-delay: 900ms;
 }
 
-article .menu .menu__card .menu__desc .menu__text {
-  cursor: pointer;
+article .menu .menu__card .menu__desc .menu__text:hover > .menu__price {
+  /* SELECTIONNE UN ELEMENT ENFANT DE LA DIV */
+  -webkit-animation: price_slide 500ms ease-in-out forwards;
+          animation: price_slide 500ms ease-in-out forwards;
 }
 
 article .menu .menu__card .menu__desc .menu__text:hover + .menu__slide {
-  /* SELECTIONNE LA DIV ADJACENTE (VOISIN DIRECT) POUR APPLIQUER L'ANIMATION */
+  /* SELECTIONNE LA DIV ADJACENTE POUR APPLIQUER L'ANIMATION */
   opacity: 1;
   -webkit-animation: expand 500ms ease-in-out forwards;
           animation: expand 500ms ease-in-out forwards;
 }
 
 article .menu .menu__card .menu__desc .menu__text:hover + .menu__slide .menu__spin {
-  -webkit-animation: spin2 500ms ease-in-out;
-          animation: spin2 500ms ease-in-out;
+  -webkit-animation: icon_spin 500ms ease-in-out forwards;
+          animation: icon_spin 500ms ease-in-out forwards;
 }
 
 article .menu .menu__card .menu__desc .menu__text .menu__price {
+  opacity: 1;
   font-weight: bold;
   position: absolute;
-  left: 80%;
+  right: 30px;
+  -webkit-animation: price_slide_out 500ms ease-in-out forwards;
+          animation: price_slide_out 500ms ease-in-out forwards;
 }
 
 article .menu .menu__card .menu__desc .menu__slide {
-  opacity: 0;
+  -webkit-animation: expand_out 500ms ease-in-out forwards;
+          animation: expand_out 500ms ease-in-out forwards;
   -webkit-transform-origin: right;
           transform-origin: right;
   position: absolute;
   right: 0%;
   top: 0%;
   bottom: 0%;
-  border-radius: 0px 15px 15px 0px;
+  border-radius: 15px;
   width: 60px;
   background-color: #99E2D0;
 }
 
 article .menu .menu__card .menu__desc .menu__slide .menu__spin {
+  -webkit-animation: icon_spin_out 500ms ease-in-out forwards;
+          animation: icon_spin_out 500ms ease-in-out forwards;
   margin-top: 25px;
   margin-left: 17px;
   font-size: 22px;
@@ -694,30 +710,106 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 
 @-webkit-keyframes expand {
   from {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    height: 67px;
+    width: 0px;
+    border-radius: 0px;
   }
   to {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    height: 67px;
+    width: 60px;
+    border-radius: 0px;
   }
 }
 
 @keyframes expand {
   from {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    height: 67px;
+    width: 0px;
+    border-radius: 0px;
   }
   to {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    height: 67px;
+    width: 60px;
+    border-radius: 0px;
   }
 }
 
-@-webkit-keyframes spin2 {
+@-webkit-keyframes expand_out {
+  from {
+    height: 67px;
+    width: 60px;
+    border-radius: 0px;
+  }
+  to {
+    height: 67px;
+    width: 0px;
+    width: 0px;
+    border-radius: 0px;
+  }
+}
+
+@keyframes expand_out {
+  from {
+    height: 67px;
+    width: 60px;
+    border-radius: 0px;
+  }
+  to {
+    height: 67px;
+    width: 0px;
+    width: 0px;
+    border-radius: 0px;
+  }
+}
+
+@-webkit-keyframes price_slide {
+  from {
+    position: absolute;
+    right: 30px;
+  }
+  to {
+    position: absolute;
+    right: 65px;
+  }
+}
+
+@keyframes price_slide {
+  from {
+    position: absolute;
+    right: 30px;
+  }
+  to {
+    position: absolute;
+    right: 65px;
+  }
+}
+
+@-webkit-keyframes price_slide_out {
+  from {
+    position: absolute;
+    right: 65px;
+  }
+  to {
+    position: absolute;
+    right: 30px;
+  }
+}
+
+@keyframes price_slide_out {
+  from {
+    position: absolute;
+    right: 65px;
+  }
+  to {
+    position: absolute;
+    right: 30px;
+  }
+}
+
+@-webkit-keyframes icon_spin {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -725,14 +817,36 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   }
 }
 
-@keyframes spin2 {
+@keyframes icon_spin {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes icon_spin_out {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes icon_spin_out {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 

@@ -1,4 +1,27 @@
-@import "./Utils/variables";
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+
+$color-mods:(
+    purple:$color-primary,
+    pink:$color-secondary,
+    green:$color-tertiary,
+);
+
+
+$bg-location:rgba(128, 128, 128, 0.150);
+$bg-booking:rgba(128, 128, 128, 0.075);
+$bg-footer:rgba(0, 0, 0, 0.750);
+
+
+$font-text-light:"Roboto-Light";
+$font-text-medium:"Roboto-Medium";
+$font-text-bold:"Roboto-Bold";
+$font-title:"Shrikhand";
+
+
+$anim-duration: 500ms;
+$anim-delay: $anim-duration / 5;
 
 
 * {-webkit-font-smoothing: antialiased;}
@@ -207,6 +230,7 @@ body, html{
         border-radius: 25px 25px;
         margin-bottom: 20px;
         position: relative;
+        width: 500px; 
 
         .restaurant__heart{
             position: absolute;
@@ -216,9 +240,9 @@ body, html{
             cursor: pointer;
 
             &:hover:before{
-                font-weight: 900;
-                background-position: bottom;                                 
-                -webkit-text-fill-color: transparent;
+                font-weight: 900;                                
+                background-position: bottom;                                             
+                -webkit-text-fill-color: transparent;     
 
                 -webkit-background-clip: text;                              /* CIBLE L'INTERIEUR DE L'ICONE */
                 background-image: linear-gradient(to top, $color-primary 50%, transparent 50%);          /* PERMET DE REMPLIR LE BOUTON DE BAS EN HAUT */
@@ -314,7 +338,8 @@ body, html{
 
 @keyframes spin {
     0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg); opacity: 0; position: absolute; right: 99999px;}          /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
+    50% { transform: rotate(360deg); opacity: 0;}
+    100% { position: absolute; right: 99999px;}          /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
   }
 
 
@@ -385,7 +410,9 @@ article{
                 margin-right: 90%;
             }
             .menu__desc{ 
+                overflow: hidden;                            /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
                 background-color: #fff;
+                cursor: pointer;
                 padding: 12px 0px 12px 10px;
                 border-radius: 15px;
                 margin-bottom: 10px;
@@ -398,38 +425,47 @@ article{
                         animation-delay: $anim-delay*$i;
                     }
                 }
+
                 .menu__text{
-                    cursor: pointer;
-                    &:hover + .menu__slide{                                 /* SELECTIONNE LA DIV ADJACENTE (VOISIN DIRECT) POUR APPLIQUER L'ANIMATION */
+                    &:hover > .menu__price{                                 /* SELECTIONNE UN ELEMENT ENFANT DE LA DIV */
+                        animation: price_slide 500ms ease-in-out forwards;
+                    }
+                    &:hover + .menu__slide{                                 /* SELECTIONNE LA DIV ADJACENTE POUR APPLIQUER L'ANIMATION */
                         opacity: 1;
                         animation: expand 500ms ease-in-out forwards;
                         .menu__spin{
-                            animation: spin2 500ms ease-in-out;
+                            animation: icon_spin 500ms ease-in-out forwards;
                         }
                     }
                     .menu__price{
+                        opacity: 1;
                         font-weight: bold;
                         position: absolute;
-                        left: 80%;
+                        right: 30px;
+                        animation: price_slide_out 500ms ease-in-out forwards;
                     }
                 }
+
+
                 .menu__slide{
-                    opacity: 0;
+                    animation: expand_out 500ms ease-in-out forwards;
                     transform-origin: right;
                     position: absolute;
                     right: 0%;
                     top: 0%;
                     bottom: 0%;
-                    border-radius: 0px 15px 15px 0px;
+                    border-radius: 15px;
                     width: 60px;
                     background-color: $color-tertiary;
-                    .menu__spin{
-                        margin-top: 25px;
-                        margin-left: 17px;
-                        font-size: 22px;
-                        color: #fff;
-                    }
+                .menu__spin{
+                    animation: icon_spin_out 500ms ease-in-out forwards;
+                    margin-top: 25px;
+                    margin-left: 17px;
+                    font-size: 22px;
+                    color: #fff;
                 }
+            }
+
                 .menu__text--title{
                     font-family: $font-text-light;
                     margin-bottom: 5px;
@@ -457,6 +493,13 @@ article{
 }
 
 
+
+
+
+
+
+
+
 @keyframes menu_fade {
     0% {
         opacity: 0;
@@ -465,18 +508,64 @@ article{
         opacity: 1;
     }
 }
+
+
 @keyframes expand {
     from {
-        transform: scaleX(0);
+        height: 67px;
+        width: 0px;
+        border-radius: 0px; 
     }
     to{
-        transform: scaleX(1);
-
+        height: 67px;
+        width: 60px;
+        border-radius: 0px;
     }
 }
-@keyframes spin2 {
-    0% { transform: rotate(0deg);}
-    100% { transform: rotate(360deg);}
+@keyframes expand_out {
+    from {
+        height: 67px;
+        width: 60px;
+        border-radius: 0px; 
+    }
+    to{
+        height: 67px;
+        width: 0px;
+        width: 0px;
+        border-radius: 0px;
+    }
+}
+@keyframes price_slide {
+    from {
+        position:absolute; right: 30px;
+    }
+    to{
+        position:absolute; right: 65px;
+    }
+}
+@keyframes price_slide_out {
+    from {
+        position: absolute; right: 65px;
+    }
+    to {
+        position: absolute; right: 30px;
+    }
+}
+@keyframes icon_spin {
+    0% { 
+        transform: rotate(180deg);
+    }
+    100% { 
+        transform: rotate(360deg);
+    }
+}
+@keyframes icon_spin_out {
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% { 
+        transform: rotate(0deg);
+    }
 }
 
 
