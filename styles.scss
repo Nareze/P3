@@ -142,6 +142,9 @@ $anim-delay: $anim-duration / 5;
     margin-bottom: 20px;
     box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.300);
     cursor: pointer;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 
@@ -475,7 +478,8 @@ article{
                             animation-delay: $anim-delay*$i;
                         }
                     }
-                .menu__text{
+                .menu__text{ 
+
                     &:hover > .menu__price{                                 /* SELECTIONNE UN ELEMENT ENFANT DE LA DIV */
                         animation: price_slide 500ms ease-in-out forwards;
                     }
@@ -484,7 +488,11 @@ article{
                         animation: expand 500ms ease-in-out forwards;
                         .menu__spin{
                             animation: icon_spin 500ms ease-in-out forwards;
+                            transform: rotate(0deg);
                         }
+                    }
+                    &:hover > .menu__text--desc{
+                        width: 250px;
                     }
                     .menu__price{
                         opacity: 1;
@@ -499,13 +507,13 @@ article{
                     animation: expand_out 500ms ease-in-out forwards;
                     transform-origin: right;
                     @include menu_slide_theme;
-                    @include flex_center(flex, center, center, "")
-                .menu__spin{
-                    animation: icon_spin_out 500ms ease-in-out forwards;
-                    font-size: 30px;
-                    color: #fff;
+                    @include flex_center(flex, center, center, "");
+                    .menu__spin{
+                        animation: icon_spin_out 500ms ease-in-out forwards;
+                        font-size: 30px;
+                        color: #fff;
+                    }
                 }
-            }
                 .menu__text--title{
                     font-family: $font-text-light;
                     font-size: 25px;
@@ -514,9 +522,14 @@ article{
                     margin-left: 5px;
                 }
                 .menu__text--desc{
+                    animation: text_ellipsis_out 500ms ease-in-out forwards;
                     font-family: $font-text-light;
                     font-size: 20px;
                     margin-left: 5px;
+                    display: inline-block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 &:hover{
                     @include button_shadow;
@@ -537,7 +550,34 @@ article{
     }
 }
 
+@keyframes text_ellipsis {
+    to{
+        
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+    }
+    from{
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+    }
+    
+}
 
+@keyframes text_ellipsis_out {
+    to{
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+    }
+    from{
+        
+text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;
+    }
+}
 
 /* FOOTER *///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

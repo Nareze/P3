@@ -535,6 +535,9 @@ article .menu .menu__card .menu__desc {
   -webkit-box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.3);
           box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.3);
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   position: relative;
   -webkit-animation: menu_fade 500ms forwards ease-in-out;
           animation: menu_fade 500ms forwards ease-in-out;
@@ -611,6 +614,12 @@ article .menu .menu__card .menu__desc .menu__text:hover + .menu__slide {
 article .menu .menu__card .menu__desc .menu__text:hover + .menu__slide .menu__spin {
   -webkit-animation: icon_spin 500ms ease-in-out forwards;
           animation: icon_spin 500ms ease-in-out forwards;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+article .menu .menu__card .menu__desc .menu__text:hover > .menu__text--desc {
+  width: 250px;
 }
 
 article .menu .menu__card .menu__desc .menu__text .menu__price {
@@ -664,9 +673,15 @@ article .menu .menu__card .menu__desc .menu__text--title {
 }
 
 article .menu .menu__card .menu__desc .menu__text--desc {
+  -webkit-animation: text_ellipsis_out 500ms ease-in-out forwards;
+          animation: text_ellipsis_out 500ms ease-in-out forwards;
   font-family: "Roboto-Light";
   font-size: 20px;
   margin-left: 5px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 article .menu .menu__card .menu__desc:hover {
@@ -718,6 +733,58 @@ article .menu .menu__card .menu__commander .menu__button:hover {
           filter: brightness(110%);
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
+}
+
+@-webkit-keyframes text_ellipsis {
+  to {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  from {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+@keyframes text_ellipsis {
+  to {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  from {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+@-webkit-keyframes text_ellipsis_out {
+  to {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  from {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+@keyframes text_ellipsis_out {
+  to {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  from {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 
 /* FOOTER */
