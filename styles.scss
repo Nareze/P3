@@ -175,7 +175,7 @@ body, html{
 
 
 .location{
-    height: 120px;
+    height: 80px;
     @include flex_center(flex,center,center,"");
     background-color: $bg-location;
     .location__title{
@@ -507,12 +507,14 @@ article{
                     transform-origin: right;
                     @include menu_slide_theme;
                     @include flex_center(flex, center, center, "");
-
                     overflow: hidden;
+
                     .menu__spin{
                         animation: icon_spin_out 500ms ease-in-out forwards;
                         font-size: 30px;
-                        color: #fff;
+                    }
+                    .fa-check-circle{
+                        color: white;
                     }
                 }
                 .menu__text--title{
@@ -638,7 +640,7 @@ white-space: nowrap;
 }
 @keyframes price_slide_out {
     from {
-        position: absolute; right: 65px;
+        position: absolute; right: 105px;
     }
     to {
         position: absolute; right: 30px;

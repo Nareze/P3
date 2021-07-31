@@ -48,7 +48,7 @@ body, html {
 
 /* NAV */
 .location {
-  height: 120px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,7 +663,10 @@ article .menu .menu__card .menu__desc .menu__slide .menu__spin {
   -webkit-animation: icon_spin_out 500ms ease-in-out forwards;
           animation: icon_spin_out 500ms ease-in-out forwards;
   font-size: 30px;
-  color: #fff;
+}
+
+article .menu .menu__card .menu__desc .menu__slide .fa-check-circle {
+  color: white;
 }
 
 article .menu .menu__card .menu__desc .menu__text--title {
@@ -892,7 +895,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 @-webkit-keyframes price_slide_out {
   from {
     position: absolute;
-    right: 65px;
+    right: 105px;
   }
   to {
     position: absolute;
@@ -903,7 +906,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 @keyframes price_slide_out {
   from {
     position: absolute;
-    right: 65px;
+    right: 105px;
   }
   to {
     position: absolute;
