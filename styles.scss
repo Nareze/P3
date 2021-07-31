@@ -85,13 +85,13 @@ $anim-delay: $anim-duration / 5;
 @mixin restaurant__new{
     padding: 6px 10px 6px 10px;
     position: absolute;
-    bottom: 82%;
-    right: 4%;
+    bottom: 85%;
+    right: 5%;
     background-color: map-get($color-mods, green);
     color: green;
-    border-radius: 2px;
+    border-radius: 5px;
     font-family: $font-text-medium;
-    font-size: 15px;
+    font-size: 20px;
 }
 @mixin menu__position{
     position: relative;
@@ -151,6 +151,7 @@ $anim-delay: $anim-duration / 5;
 body, html{
     margin: 0;
 }
+
 
 
 
@@ -435,6 +436,8 @@ body, html{
 
 
 
+
+
 article{
     background-color: rgb(240, 240, 240);
     .menu{
@@ -451,7 +454,6 @@ article{
                     position: absolute;
                     right: 5%;
                     cursor: pointer;
-
                     &:hover:before{
                         @include heart_fill;
                     }
@@ -462,9 +464,18 @@ article{
                 font-size: 20px;
                 font-family: $font-text-light;
                 margin-top: 45px;
-                margin-bottom: 30px;
+                /*margin-bottom: 30px;*/
+                margin-bottom: -15px;
+            }
+            .menu_separator{
+                height:5px;
+                width:5%;
+                background-color:$color-tertiary;
+                margin-left: 0px;
+                border: none;
             }
             .menu__desc{ 
+                margin-top: 25px;
                 overflow: hidden;                            /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
                 @include menu_desc_theme;
                 position: relative;

@@ -292,13 +292,13 @@ body, html {
 .restaurant .restaurant__location .restaurant__new {
   padding: 6px 10px 6px 10px;
   position: absolute;
-  bottom: 82%;
-  right: 4%;
+  bottom: 85%;
+  right: 5%;
   background-color: #99E2D0;
   color: green;
-  border-radius: 2px;
+  border-radius: 5px;
   font-family: "Roboto-Medium";
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .restaurant .restaurant__location .restaurant__img {
@@ -521,10 +521,20 @@ article .menu .menu__card .menu__title {
   font-size: 20px;
   font-family: "Roboto-Light";
   margin-top: 45px;
-  margin-bottom: 30px;
+  /*margin-bottom: 30px;*/
+  margin-bottom: -15px;
+}
+
+article .menu .menu__card .menu_separator {
+  height: 5px;
+  width: 5%;
+  background-color: #99E2D0;
+  margin-left: 0px;
+  border: none;
 }
 
 article .menu .menu__card .menu__desc {
+  margin-top: 25px;
   overflow: hidden;
   /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
   background-color: #fff;
