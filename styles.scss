@@ -679,6 +679,11 @@ white-space: nowrap;
     height: 500px;
     animation: spin 3s forwards;
 }
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    40% { transform: rotate(360deg); opacity: 0;}
+    100% { position: absolute; right: 99999px;}         /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
+}
 
 
 
@@ -731,7 +736,7 @@ white-space: nowrap;
     @keyframes spin {
         0% { transform: rotate(0deg);}
         40% { transform: rotate(360deg); opacity: 0;}
-        100% { position: absolute; right: 99999px;}         /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
+        100% { position: absolute !important; right: 99999px !important;}         /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
     }
     
 }
