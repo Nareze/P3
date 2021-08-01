@@ -970,13 +970,13 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 }
 
 .loader {
-  border: 50px solid #9356DC;
-  border-right: 50px solid #FF79DA;
-  border-bottom: 50px solid #9356DC;
-  border-left: 50px solid #FF79DA;
+  border: 25px solid #9356DC;
+  border-right: 25px solid #FF79DA;
+  border-bottom: 25px solid #9356DC;
+  border-left: 25px solid #FF79DA;
   border-radius: 50%;
-  width: 500px;
-  height: 500px;
+  width: 250px;
+  height: 250px;
   -webkit-animation: spin 3s forwards;
           animation: spin 3s forwards;
 }
@@ -1016,28 +1016,6 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
-  body .overlay {
-    position: fixed;
-    /* NON AFFECTE PAR LE SCROLLING DE LA PAGE */
-    z-index: 5;
-    /* LE POSITIONNE EN PREMIER PLAN */
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    /* CENTRE LE LOADER AU MILIEU DE LA PAGE */
-  }
-  body .overlay .loader {
-    border: 50px solid #9356DC;
-    border-right: 50px solid #FF79DA;
-    border-bottom: 50px solid #9356DC;
-    border-left: 50px solid #FF79DA;
-    border-radius: 50%;
-    width: 500px;
-    height: 500px;
-    -webkit-animation: spin 3s forwards;
-            animation: spin 3s forwards;
-  }
   body article .restaurant {
     height: 500px;
   }
@@ -1070,8 +1048,8 @@ article .menu .menu__card .menu__commander .menu__button:hover {
       opacity: 0;
     }
     100% {
-      position: absolute !important;
-      right: 99999px !important;
+      position: absolute;
+      left: 5000px;
     }
     /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
   }
@@ -1086,14 +1064,36 @@ article .menu .menu__card .menu__commander .menu__button:hover {
       opacity: 0;
     }
     100% {
-      position: absolute !important;
-      right: 99999px !important;
+      position: absolute;
+      left: 5000px;
     }
     /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
   }
 }
 
 @media (min-width: 1000px) and (max-width: 2560px) {
+  body .overlay {
+    position: fixed;
+    /* NON AFFECTE PAR LE SCROLLING DE LA PAGE */
+    z-index: 5;
+    /* LE POSITIONNE EN PREMIER PLAN */
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    /* CENTRE LE LOADER AU MILIEU DE LA PAGE */
+  }
+  body .overlay .loader {
+    border: 25px solid #9356DC;
+    border-right: 25px solid #FF79DA;
+    border-bottom: 25px solid #9356DC;
+    border-left: 25px solid #FF79DA;
+    border-radius: 50%;
+    width: 750px;
+    height: 750px;
+    -webkit-animation: spin 3s forwards;
+            animation: spin 3s forwards;
+  }
   body header .banner {
     height: 120px;
   }
@@ -1235,6 +1235,38 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   }
   body .about .about__list .about__icon {
     font-size: 25px;
+  }
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    40% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+      opacity: 0;
+    }
+    100% {
+      position: absolute;
+      right: 99999px;
+    }
+    /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
+  }
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    40% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+      opacity: 0;
+    }
+    100% {
+      position: absolute;
+      right: 99999px;
+    }
+    /* LA POSITION ABSOLUTE PERMET DE L'ENLEVER DE LA PAGE */
   }
 }
 /*# sourceMappingURL=styles.css.map */
