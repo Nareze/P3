@@ -23,7 +23,8 @@ body, html {
 
 /* HEADER */
 .banner {
-  height: 120px;
+  /*height: 120px;*/
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,12 +44,14 @@ body, html {
 }
 
 .banner .banner__img {
-  height: 60px;
+  /*height: 60px;*/
+  height: 30px;
 }
 
 /* NAV */
 .location {
-  height: 80px;
+  /*height: 80px; */
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,18 +70,22 @@ body, html {
 
 .location .location__title {
   font-weight: normal;
-  font-size: 30px;
+  /*font-size: 30px;*/
+  font-size: 15px;
   font-family: "Roboto-Medium";
 }
 
 .location .location__icone {
-  font-size: 25px;
-  margin-right: 25px;
+  /*font-size: 25px;*/
+  font-size: 11px;
+  /*margin-right: 25px;*/
+  margin-right: 12px;
   margin-bottom: 3px;
 }
 
 .booking {
-  height: 550px;
+  /*height: 500px;*/
+  height: 275px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,25 +103,31 @@ body, html {
 }
 
 .booking .booking__title {
-  font-size: 50px;
-  margin-top: 75px;
+  /*font-size: 50px;*/
+  font-size: 25px;
+  /*margin-top: 75px;*/
+  margin-top: 35px;
   text-align: center;
   font-family: "Roboto-Bold";
 }
 
 .booking .booking__desc {
-  font-size: 35px;
+  /*font-size: 30px;*/
+  font-size: 16px;
   padding-bottom: 15px;
-  margin-top: -15px;
+  margin-top: -5px;
   text-align: center;
   font-family: "Roboto-Light";
 }
 
 .booking .booking__button {
   font-family: "Roboto-Medium";
-  width: 400px;
-  font-size: 28px;
-  padding: 25px;
+  /*width: 400px;*/
+  width: 200px;
+  /*font-size: 30px;*/
+  font-size: 15px;
+  /*padding: 25px;*/
+  padding: 12px;
   border-radius: 40px;
   border: none;
   color: #fff;
@@ -135,7 +148,21 @@ body, html {
 
 /* ARTICLE */
 .card {
-  height: 800px;
+  background-color: #fff;
+}
+
+.card .card__title {
+  font-size: 16px;
+  /*font-size: 30px;*/
+  font-family: "Roboto-Bold";
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 12px;
+}
+
+.card .card__container {
+  height: 400px;
+  /*height: 800px;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,27 +176,20 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 45px;
 }
 
-.card .card__title {
-  font-size: 30px;
-  font-family: "Roboto-Bold";
-  width: 86%;
-  margin-top: 43px;
-  margin-bottom: 20px;
-}
-
-.card .card__restaurant {
+.card .card__container .card__restaurant {
   -webkit-box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.15);
           box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.15);
   font-family: "Roboto-Medium";
-  font-size: 30px;
-  height: 100px;
+  /*font-size: 30px;*/
+  font-size: 13px;
+  /*height: 100px;*/
+  height: 80px;
   background-color: rgba(128, 128, 128, 0.075);
+  /*width: 80%;*/
   width: 85%;
-  padding: 25px;
-  border-radius: 50px;
+  border-radius: 22px;
   margin-bottom: 40px;
   text-align: center;
   position: relative;
@@ -188,30 +208,35 @@ body, html {
           flex-direction: "";
 }
 
-.card .card__restaurant .card__number {
+.card .card__container .card__restaurant .card__number {
   position: absolute;
-  font-size: 25px;
+  /*font-size: 25px;*/
+  font-size: 16px;
   left: -10px;
   background-color: #9356DC;
   border-radius: 50%;
-  line-height: 32px;
+  /*line-height: 30px;*/
+  line-height: 20px;
   /* METS LE CHIFFRE A LA MEME HAUTEUR QUE LE CERCLE */
-  height: 32px;
-  width: 32px;
+  /*height: 30px;*/
+  height: 20px;
+  /*width: 30px;*/
+  width: 20px;
   color: #fff;
 }
 
-.card .card__restaurant .card__icon {
+.card .card__container .card__restaurant .card__icon {
   position: absolute;
-  left: 50px;
+  /*left: 50px;*/
+  left: 24px;
   color: grey;
 }
 
-.card .card__restaurant .cart__icon--store {
+.card .card__container .card__restaurant .cart__icon--store {
   color: #9356DC;
 }
 
-.card .card__restaurant:hover {
+.card .card__container .card__restaurant:hover {
   cursor: pointer;
   /* APPLIQUE OMBRE ET LUMIERE SUR BOUTTONS */
   -webkit-box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
@@ -222,13 +247,26 @@ body, html {
           transition-duration: 250ms;
 }
 
-.card div:last-child {
-  background-color: #9256dc1f;
+.card .card__container div:last-child {
+  background-color: rgba(128, 0, 128, 0.151);
 }
 
 .restaurant {
-  height: 2200px;
   background-color: rgba(128, 128, 128, 0.075);
+}
+
+.restaurant .restaurant__title {
+  font-size: 16px;
+  /*font-size: 30px;*/
+  font-family: "Roboto-Bold";
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 17px;
+}
+
+.restaurant .restaurant__container {
+  height: 1400px;
+  /*height: 2300px;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,24 +282,13 @@ body, html {
           flex-direction: column;
 }
 
-.restaurant a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.restaurant .restaurant__title {
-  font-family: "Roboto-Bold";
-  margin-top: 73px;
-  margin-bottom: 50px;
-  font-size: 40px;
-  width: 85%;
-}
-
 .restaurant .restaurant__location {
   background-color: #fff;
-  height: 440px;
-  border-radius: 25px 25px;
-  margin-bottom: 40px;
+  /*height: 400px;*/
+  height: 275px;
+  /*border-radius: 25px 25px;*/
+  border-radius: 20px 20px;
+  margin-bottom: 30px;
   position: relative;
   width: 85%;
 }
@@ -269,8 +296,8 @@ body, html {
 .restaurant .restaurant__location .restaurant__heart {
   position: absolute;
   left: 85%;
-  bottom: 60px;
-  font-size: 30px;
+  bottom: 20px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -298,28 +325,40 @@ body, html {
   color: green;
   border-radius: 5px;
   font-family: "Roboto-Medium";
-  font-size: 20px;
+  /*font-size: 20px;*/
+  font-size: 10px;
 }
 
 .restaurant .restaurant__location .restaurant__img {
-  height: 325px;
+  /*height: 300px;*/
+  height: 200px;
   width: 100%;
-  border-radius: 25px 25px 0 0;
+  /*border-radius: 25px 25px 0 0;*/
+  border-radius: 12px 12px 0 0;
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .restaurant .restaurant__location h4 {
-  font-size: 30px;
-  margin-top: 12px;
+  /*font-size: 30px;*/
+  font-size: 18px;
+  /*margin-top: 12px;*/
+  margin-top: 6px;
   margin-left: 12px;
   font-family: "Roboto-Bold";
 }
 
+.restaurant .restaurant__location a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .restaurant .restaurant__location p {
-  font-size: 25px;
-  margin-top: -30px;
+  /*font-size: 25px;*/
+  font-size: 16px;
+  /*margin-top: -30px;*/
+  margin-top: -15px;
   padding-left: 12px;
   font-family: "Roboto-Light";
 }
@@ -336,7 +375,8 @@ body, html {
 
 /* FOOTER */
 .about {
-  height: 400px;
+  /*height: 400px;*/
+  height: 200px;
   background-color: rgba(0, 0, 0, 0.75);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -355,23 +395,27 @@ body, html {
 
 .about .about__list {
   list-style-type: none;
-  font-size: 40px;
+  /*font-size: 40px;*/
+  font-size: 20px;
   color: #fff;
 }
 
 .about .about__list li:first-child {
   font-family: "Shrikhand";
   font-weight: bold;
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
+  margin-bottom: 10px;
 }
 
 .about .about__list li:not(:first-child) {
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
+  margin-bottom: 5px;
   font-family: "Roboto-Medium";
 }
 
 .about .about__list .about__icon {
-  font-size: 30px;
+  /*font-size: 30px;*/
+  font-size: 15px;
   margin-right: 20px;
 }
 
@@ -730,9 +774,12 @@ article .menu .menu__card .menu__commander {
 article .menu .menu__card .menu__commander .menu__button {
   margin-top: 55px;
   font-family: "Roboto-Medium";
-  width: 400px;
-  font-size: 28px;
-  padding: 25px;
+  /*width: 400px;*/
+  width: 200px;
+  /*font-size: 30px;*/
+  font-size: 15px;
+  /*padding: 25px;*/
+  padding: 12px;
   border-radius: 40px;
   border: none;
   color: #fff;
@@ -965,6 +1012,175 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  body article .restaurant {
+    height: 500px;
+  }
+  body article .restaurant .restaurant__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  body article .restaurant .restaurant__container .restaurant__location {
+    margin-right: 20px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 2560px) {
+  body header .banner {
+    height: 120px;
+  }
+  body header .banner .banner__img {
+    height: 60px;
+  }
+  body nav .location {
+    height: 100px;
+  }
+  body nav .location .location__title {
+    font-size: 30px;
+  }
+  body nav .location .location__icone {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  body nav .booking {
+    height: 400px;
+  }
+  body nav .booking .booking__title {
+    font-size: 40px;
+  }
+  body nav .booking .booking__desc {
+    font-size: 25px;
+  }
+  body nav .booking .booking__button {
+    font-size: 30px;
+    width: 400px;
+    padding: 20px;
+  }
+  body article .card .card__title {
+    font-size: 19px;
+  }
+  body article .card .card__container {
+    height: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  body article .card .card__restaurant {
+    height: 150px !important;
+    font-size: 25px !important;
+    margin-right: 30px;
+  }
+  body article .card .card__restaurant .card__desc {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  body article .restaurant .restaurant__title {
+    font-size: 19px;
+  }
+  body article .restaurant .restaurant__container {
+    height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  body article .restaurant .restaurant__container .restaurant__location {
+    margin-right: 20px;
+    height: 400px;
+  }
+  body article .restaurant .restaurant__container .restaurant__location .restaurant__img {
+    height: 320px;
+  }
+  body article .restaurant .restaurant__container .restaurant__location h4 {
+    font-size: 20px;
+  }
+  body article .restaurant .restaurant__container .restaurant__location p {
+    font-size: 18px;
+  }
+  body article .restaurant .restaurant__container .restaurant__location .restaurant__new {
+    font-size: 17px;
+  }
+  body .menu {
+    height: 1000px !important;
+  }
+  body .menu .menu__desc {
+    margin-right: 50px;
+    width: 100%;
+  }
+  body .menu .starter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .menu .dish {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .menu .desserts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body .menu .menu__commander {
+    margin-top: 50px;
+  }
+  body .menu .menu__commander .menu__button {
+    font-size: 30px !important;
+    width: 350px !important;
+    padding: 20px !important;
+  }
+  body .about {
+    height: 300px !important;
+  }
+  body .about .about__list {
+    font-size: 30px;
+  }
+  body .about .about__list .about__icon {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

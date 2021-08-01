@@ -39,6 +39,10 @@ $anim-delay: $anim-duration / 5;
 }
 
 
+
+
+
+
 @mixin flex_center($flex,$horizontal_center,$vertical_center,$column){
     display: $flex;
     justify-content: $horizontal_center;
@@ -47,34 +51,33 @@ $anim-delay: $anim-duration / 5;
 }
 @mixin number_circle{
     position: absolute;
-    font-size: 25px;
+    /*font-size: 25px;*/                                    font-size: 16px;
     left: -10px;
     background-color: map-get($color-mods,purple);
     border-radius: 50%;
-    line-height: 32px;                                              /* METS LE CHIFFRE A LA MEME HAUTEUR QUE LE CERCLE */
-    height: 32px;
-    width: 32px;
+    /*line-height: 30px;*/                      line-height: 20px;                                                   /* METS LE CHIFFRE A LA MEME HAUTEUR QUE LE CERCLE */
+    /*height: 30px;*/                            height: 20px;
+    /*width: 30px;*/                             width: 20px;
     color: #fff;
 }
 @mixin card__choose{
     box-shadow: 2px 2px 4px $bg-location;
     font-family: $font-text-medium;
-    font-size: 30px;
+    /*font-size: 30px;*/                                        font-size: 13px;
 
-    height: 100px;
+    /*height: 100px;*/                              height: 80px;
     background-color: $bg-booking;
-    width: 85%;
-    padding: 25px;
-    border-radius: 50px;
+    /*width: 80%;*/                                             width: 85%;
+    border-radius: 22px;
     margin-bottom: 40px;
     text-align: center;
     position: relative;
 }
 @mixin booking_button{
     font-family: $font-text-medium;
-    width: 400px;
-    font-size: 28px;
-    padding: 25px;
+    /*width: 400px;*/                                                   width: 200px;
+    /*font-size: 30px;*/                                                    font-size: 15px;           
+    /*padding: 25px;*/                                                  padding: 12px;
     border-radius: 40px;
     border: none;
     color: #fff;
@@ -91,7 +94,7 @@ $anim-delay: $anim-duration / 5;
     color: green;
     border-radius: 5px;
     font-family: $font-text-medium;
-    font-size: 20px;
+    /*font-size: 20px;*/                                                font-size: 10px;
 }
 @mixin menu__position{
     position: relative;
@@ -160,12 +163,12 @@ body, html{
 
 
 .banner{
-    height: 120px;
+    /*height: 120px;*/                                          height: 60px;
     @include flex_center(flex,center,center,"");
     position: relative;
     box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.300);
     .banner__img{
-        height: 60px;
+        /*height: 60px;*/                                   height: 30px;
     }
 }
 
@@ -176,36 +179,36 @@ body, html{
 
 
 .location{
-    height: 80px;
+    /*height: 80px; */                                  height: 50px;                                                  
     @include flex_center(flex,center,center,"");
     background-color: $bg-location;
     .location__title{
         font-weight: normal;
-        font-size: 30px;
+        /*font-size: 30px;*/                                font-size: 15px;                    
         font-family: $font-text-medium;
     }
     .location__icone{
-        font-size: 25px;
-        margin-right: 25px;
+        /*font-size: 25px;*/                                    font-size: 11px;
+        /*margin-right: 25px;*/                                 margin-right: 12px;
         margin-bottom: 3px;
     }
 }
 
 
 .booking{
-    height: 550px;
+    /*height: 500px;*/                                              height: 275px;
     @include flex_center(flex,"",center,column);
     background-color: $bg-booking;
     .booking__title{
-        font-size: 50px;
-        margin-top: 75px;
+        /*font-size: 50px;*/                                            font-size: 25px;
+        /*margin-top: 75px;*/                                           margin-top: 35px;
         text-align: center;
         font-family: $font-text-bold;
     }
     .booking__desc{
-        font-size: 35px;
+        /*font-size: 30px;*/                                                    font-size: 16px;
         padding-bottom: 15px;
-        margin-top: -15px;
+        margin-top: -5px;
         text-align: center;
         font-family: $font-text-light;
     }
@@ -224,17 +227,18 @@ body, html{
 
 
 .card{
-    height: 800px;
-    @include flex_center(flex,"",center,column);
-    margin-bottom: 45px;
+    background-color: #fff;
     .card__title{
-        font-size: 30px;
+        font-size: 16px;        /*font-size: 30px;*/                                        
         font-family: $font-text-bold;
-        width: 86%;
-        margin-top: 43px;
-        margin-bottom: 20px;
-
+        padding-top: 25px;
+        padding-left: 25px;
+        padding-bottom: 12px;
     }
+    .card__container{
+        height: 400px;          /*height: 800px;*/ 
+        @include flex_center(flex,"",center,column);
+
     .card__restaurant{
 
         @include card__choose;
@@ -244,7 +248,7 @@ body, html{
         }
         .card__icon{
             position: absolute;
-            left: 50px;
+            /*left: 50px;*/                                     left: 24px;
             color: grey;
         }
         .cart__icon--store{
@@ -253,42 +257,42 @@ body, html{
         &:hover{
             cursor: pointer;
             @include button_shadow;
+            
         }
     }
     div:last-child{
-        background-color: #9256dc1f;
+        background-color: rgba(128, 0, 128, 0.151);
     }
+}
 }
 
 
 
 .restaurant{
-    height: 2200px;
     background-color: $bg-booking;
-    @include flex_center(flex,"",center,column);
-    a{
-        color: inherit;
-        text-decoration: none;
-    }
     .restaurant__title{
-        font-family: $font-text-bold;
-        margin-top: 73px;
-        margin-bottom: 50px;
-        font-size: 40px;
-        width: 85%;
+        font-size: 16px;                /*font-size: 30px;*/ 
+        font-family: $font-text-bold; 
+        padding-top: 25px;
+        padding-left: 25px;
+        padding-bottom: 17px;                  
+    }
+    .restaurant__container{
+        height: 1400px;        /*height: 2300px;*/
+        @include flex_center(flex,"",center,column);
     }
     .restaurant__location{
         background-color: #fff;
-        height: 440px;
-        border-radius: 25px 25px;
-        margin-bottom: 40px;
+        /*height: 400px;*/                                  height: 275px;
+        /*border-radius: 25px 25px;*/                       border-radius: 20px 20px;
+        margin-bottom: 30px;
         position: relative;
         width: 85%;
         .restaurant__heart{
             position: absolute;
             left: 85%;
-            bottom: 60px;
-            font-size: 30px;
+            bottom: 20px;
+            font-size: 16px;
             cursor: pointer;
             &:hover:before{
                 @include heart_fill;
@@ -299,21 +303,25 @@ body, html{
             @include restaurant__new;
         }
         .restaurant__img{
-            height: 325px;
+            /*height: 300px;*/                                  height: 200px;                       
             width: 100%;
-            border-radius: 25px 25px 0 0;
+            /*border-radius: 25px 25px 0 0;*/                   border-radius: 12px 12px 0 0;
             position: relative;
             object-fit: cover;
         }
         h4{
-            font-size: 30px;
-            margin-top: 12px;
+            /*font-size: 30px;*/                            font-size: 18px;
+            /*margin-top: 12px;*/                                   margin-top: 6px;
             margin-left: 12px;
             font-family: $font-text-bold;
         }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
         p{
-            font-size: 25px;
-            margin-top: -30px;
+            /*font-size: 25px;*/                                font-size: 16px;
+            /*margin-top: -30px;*/                                  margin-top: -15px;
             padding-left: 12px;
             font-family: $font-text-light;
         }
@@ -330,24 +338,24 @@ body, html{
 
 
 .about{
-    height: 400px;
+    /*height: 400px;*/                                          height: 200px;
     background-color: $bg-footer;
     @include flex_center(flex,"",center,"");
     .about__list{
         list-style-type: none;
-        font-size: 40px;
+        /*font-size: 40px;*/                                    font-size: 20px;
         color: #fff;
         li:first-child{
             font-family: $font-title;
             font-weight: bold;
-            margin-bottom: 20px;
+            /*margin-bottom: 20px;*/                                margin-bottom: 10px;
         }
         li:not(:first-child){
-            margin-bottom: 10px;
+            /*margin-bottom: 10px;*/                                margin-bottom: 5px;
             font-family: $font-text-medium;
         }
         .about__icon{
-            font-size: 30px;
+            /*font-size: 30px;*/                                    font-size: 15px;
             margin-right: 20px;
         }
         li{
@@ -678,5 +686,164 @@ white-space: nowrap;
 
 
 
+
+
+
+@media (min-width: 700px) and (max-width: 1000px){
+    body{
+        article{
+        .restaurant{
+            height: 500px;
+            .restaurant__container{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                margin-right: 5%;
+                margin-left: 5%;
+                .restaurant__location{
+                    margin-right: 20px;
+                    height: 300px;
+                }
+            }
+        }
+    }
+    }
+}
+
+
+
+
+
+
+
+
+@media (min-width: 1000px) and (max-width: 2560px){
+    body{
+        header{
+            .banner{
+                height: 120px;
+                .banner__img{
+                    height: 60px;
+                }
+            }
+        }
+        nav{
+            .location{
+                height: 100px;
+                .location__title{
+                    font-size: 30px;
+                }
+                .location__icone{
+                    font-size: 20px;
+                    margin-right: 20px;
+                }
+            }
+            .booking{
+                height: 400px;
+                .booking__title{
+                    font-size: 40px;
+                }
+                .booking__desc{
+                    font-size: 25px;
+                }
+                .booking__button{
+                    font-size: 30px;
+                    width: 400px;
+                    padding: 20px;
+                }
+            }
+        }
+        article{
+            .card{
+                .card__title{
+                    font-size: 19px;
+                }
+        .card__container{
+            height: 250px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-right: 5%;
+            margin-left: 5%;
+        }
+        .card__restaurant{
+            height: 150px !important;
+            font-size: 25px !important;
+            margin-right: 30px;
+            .card__desc{
+                padding-right: 60px;
+                padding-left: 60px;
+            }
+        }
+    }
+    .restaurant{
+        .restaurant__title{
+            font-size: 19px;
+        }
+        .restaurant__container{
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin-right: 5%;
+            margin-left: 5%;
+            .restaurant__location{
+                margin-right: 20px;
+                height: 400px;
+                .restaurant__img{
+                    height: 320px;
+                }
+                h4{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 18px;
+                }
+                .restaurant__new{
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+.menu{
+    height: 1000px !important;
+    .menu__desc{
+        margin-right: 50px;
+        width: 100%;
+    }
+    .starter{
+        display: flex;
+        flex-direction: row;
+    }
+    .dish{
+        display: flex;
+        flex-direction: row;
+    }
+    .desserts{
+        display: flex;
+        flex-direction: row;
+    }
+    .menu__commander{
+        margin-top: 50px;
+        .menu__button{
+            font-size: 30px !important;
+            width: 350px !important;
+            padding: 20px !important;
+        }
+    }
+}
+.about{
+    height: 300px !important;
+    .about__list{
+        font-size: 30px;
+        .about__icon{
+            font-size: 25px;
+        }
+    }
+}
+
+}
+}
 
 
