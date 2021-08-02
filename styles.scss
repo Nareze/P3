@@ -33,11 +33,11 @@ $font-title:"Shrikhand";
 }
 @font-face {
     font-family: "Roboto-Medium";
-    src: url(./fonts/Roboto-Medium.ttf);
+    src: url(fonts/Roboto-Medium.ttf);
 }
 @font-face {
     font-family: "Roboto-Bold";
-    src: url(./fonts/Roboto-Bold.ttf);
+    src: url(fonts/Roboto-Bold.ttf);
 }
 
 
@@ -453,7 +453,7 @@ article{
             .menu__title{
                 text-transform: uppercase;
                 font-size: 20px;
-                font-family: "Roboto-Light";
+                font-family: $font-text-light;
                 margin-top: 45px;
                 /*margin-bottom: 30px;*/
                 margin-bottom: -15px;
@@ -490,10 +490,12 @@ article{
                         }
                     }
                     &:hover > .menu__text--desc{
-                        width: 300px;
+                        animation: ellipsis--textdesc 500ms ease-in-out forwards;
+                        
+                        
                     }
                     &:hover > .menu__text--title{
-                        width: 300px;
+                        animation: ellipsis--texttitle 500ms ease-in-out forwards;
                     }
                     .menu__price{
                         opacity: 1;
@@ -520,18 +522,22 @@ article{
                     }
                 }
                 .menu__text--title{
+                    animation: ellipsis_out--texttitle 500ms ease-in-out;
                     font-family: $font-text-light;
                     font-size: 25px;
                     margin-top: 20px;
                     margin-bottom: 7px;
+
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
                 .menu__text--desc{
-                    animation: text_ellipsis_out 500ms ease-in-out forwards;
+                    animation: ellipsis_out--textdesc 500ms ease-in-out;
                     font-size: 20px;
                     font-family: $font-text-light;
+
+                    
                     display: inline-block;
                     white-space: nowrap;
                     overflow: hidden;
@@ -557,15 +563,50 @@ article{
 }
 
 
-@keyframes text_ellipsis {
+@keyframes ellipsis--textdesc {
+    to{
+        width: 250px;
+
+    }
+    from {
+        width: 350px;
+    }
+    
+}
+
+
+@keyframes ellipsis_out--textdesc {
+    to{
+        width: 350px;
+    }
+    from {
+        width: 250px;
+    }
     
 }
 
 
 
-@keyframes text_ellipsis_out {
+@keyframes ellipsis--texttitle {
+    to{
+        width: 250px;
+    }
+    from {
+        width: 350px;
+    }
     
 }
+
+@keyframes ellipsis_out--texttitle {
+    to{
+        width: 350px;
+    }
+    from {
+        width: 250px;
+    }
+    
+}
+
 
 
 /* FOOTER *///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -829,48 +870,25 @@ article{
 .menu{
     height: 1000px !important;
     .menu__card{
-        margin-right: 2% !important;
-        margin-left: 2% !important;
+        margin-right: 5% !important;
+        margin-left: 5% !important;
     }
     .menu__desc{
-        margin-right: 10px;
-        height: 90px !important;
+        margin-right: 25px;
+        height: 100px !important;
         width: 100% !important;
         padding-left: 10px !important;
-        .menu__text{ 
-            &:hover > .menu__text--desc{
-                width: 150px !important;
-            }
-            &:hover > .menu__text--title{
-                width: 150px !important;
-            }
-            .menu__price{
-                opacity: 1;
-                font-weight: bold;
-                position: absolute;
-                right: 0px;
-                animation: price_slide_out 500ms ease-in-out forwards;
-                font-size: 16px !important;
-            }
-        }
         .menu__text--title{
-            font-family: $font-text-light;
-            font-size: 20px !important;
-            margin-top: 20px;
-            margin-bottom: 7px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-size: 18px !important;
         }
         .menu__text--desc{
-            animation: text_ellipsis_out 500ms ease-in-out forwards;
-            font-size: 14px !important;
-            font-family: $font-text-light;
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-size: 16px !important;
         }
+        .menu__price{
+            font-size: 16px !important;
+            display: block;
+        }
+
     }
     .starter{
         display: flex;
