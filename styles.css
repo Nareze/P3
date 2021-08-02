@@ -2,21 +2,20 @@
   -webkit-font-smoothing: antialiased;
 }
 
-@font-face {
-  font-family: "Roboto-Light";
-  src: url(./polices/Roboto-Light.ttf);
+/*
+@font-face{
+    font-family: "Roboto-Light";
+    src: url(./polices/Roboto-Light.ttf);
 }
-
 @font-face {
-  font-family: "Roboto-Medium";
-  src: url(polices/Roboto-Medium.ttf);
+    font-family: "Roboto-Medium";
+    src: url(polices/Roboto-Medium.ttf);
 }
-
 @font-face {
-  font-family: "Roboto-Bold";
-  src: url(polices/Roboto-Bold.ttf);
+    font-family: "Roboto-Bold";
+    src: url(polices/Roboto-Bold.ttf);
 }
-
+*/
 body, html {
   margin: 0;
 }
@@ -505,7 +504,7 @@ article .menu .menu__card .menu__location .menu__heart:hover:before {
 article .menu .menu__card .menu__title {
   text-transform: uppercase;
   font-size: 20px;
-  font-family: "Roboto-Light";
+  font-family: "Roboto";
   margin-top: 45px;
   /*margin-bottom: 30px;*/
   margin-bottom: -15px;
