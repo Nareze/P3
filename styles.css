@@ -4,17 +4,17 @@
 
 @font-face {
   font-family: "Roboto-Light";
-  src: url(/polices/Roboto-Light.ttf);
+  src: url(./polices/Roboto-Light.ttf);
 }
 
 @font-face {
   font-family: "Roboto-Medium";
-  src: url(/polices/Roboto-Medium.ttf);
+  src: url(polices/Roboto-Medium.ttf);
 }
 
 @font-face {
   font-family: "Roboto-Bold";
-  src: url(/polices/Roboto-Bold.ttf);
+  src: url(polices/Roboto-Bold.ttf);
 }
 
 body, html {
@@ -462,10 +462,10 @@ article .menu {
   position: relative;
   bottom: 150px;
   height: 1700px;
-  width: 100%;
   border-radius: 50px 50px 0px 0px;
   padding-top: 20px;
   background-color: #f0f0f0;
+  width: 100%;
 }
 
 article .menu .menu__card {
@@ -612,11 +612,11 @@ article .menu .menu__card .menu__desc .menu__text:hover + .menu__slide .menu__sp
 }
 
 article .menu .menu__card .menu__desc .menu__text:hover > .menu__text--desc {
-  width: 250px;
+  width: 300px;
 }
 
 article .menu .menu__card .menu__desc .menu__text:hover > .menu__text--title {
-  width: 250px;
+  width: 300px;
 }
 
 article .menu .menu__card .menu__desc .menu__text .menu__price {
@@ -740,59 +740,9 @@ article .menu .menu__card .menu__commander .menu__button:hover {
           transition-duration: 250ms;
 }
 
-@-webkit-keyframes text_ellipsis {
-  to {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  from {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-}
+@-webkit-keyframes text_ellipsis {}
 
-@keyframes text_ellipsis {
-  to {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  from {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-}
-
-@-webkit-keyframes text_ellipsis_out {
-  to {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  from {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-}
-
-@keyframes text_ellipsis_out {
-  to {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  from {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-}
-
-/* FOOTER */
+@keyframes text_ellipsis {}@-webkit-keyframes text_ellipsis_out {}@keyframes text_ellipsis_out {}/* FOOTER */
 .about--shift {
   margin-top: -150px;
 }
@@ -1188,9 +1138,49 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   body .menu {
     height: 1000px !important;
   }
+  body .menu .menu__card {
+    margin-right: 2% !important;
+    margin-left: 2% !important;
+  }
   body .menu .menu__desc {
-    margin-right: 50px;
-    width: 100%;
+    margin-right: 10px;
+    height: 90px !important;
+    width: 100% !important;
+    padding-left: 10px !important;
+  }
+  body .menu .menu__desc .menu__text:hover > .menu__text--desc {
+    width: 150px !important;
+  }
+  body .menu .menu__desc .menu__text:hover > .menu__text--title {
+    width: 150px !important;
+  }
+  body .menu .menu__desc .menu__text .menu__price {
+    opacity: 1;
+    font-weight: bold;
+    position: absolute;
+    right: 0px;
+    -webkit-animation: price_slide_out 500ms ease-in-out forwards;
+            animation: price_slide_out 500ms ease-in-out forwards;
+    font-size: 16px !important;
+  }
+  body .menu .menu__desc .menu__text--title {
+    font-family: "Roboto-Light";
+    font-size: 20px !important;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  body .menu .menu__desc .menu__text--desc {
+    -webkit-animation: text_ellipsis_out 500ms ease-in-out forwards;
+            animation: text_ellipsis_out 500ms ease-in-out forwards;
+    font-size: 14px !important;
+    font-family: "Roboto-Light";
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   body .menu .starter {
     display: -webkit-box;

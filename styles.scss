@@ -14,29 +14,32 @@ $bg-booking:rgba(128, 128, 128, 0.075);
 $bg-footer:rgba(0, 0, 0, 0.750);
 
 
-$font-text-light:"Roboto-Light";
-$font-text-medium:"Roboto-Medium";
-$font-text-bold:"Roboto-Bold";
-$font-title:"Shrikhand";
-
 
 $anim-duration: 500ms;
 $anim-delay: $anim-duration / 5;
 
 
 * {-webkit-font-smoothing: antialiased;}
+
+$font-text-light:"Roboto-Light";
+$font-text-medium:"Roboto-Medium";
+$font-text-bold:"Roboto-Bold";
+$font-title:"Shrikhand";
+
+
 @font-face{
     font-family: "Roboto-Light";
-    src: url(/polices/Roboto-Light.ttf);
+    src: url(./polices/Roboto-Light.ttf);
 }
 @font-face {
     font-family: "Roboto-Medium";
-    src: url(/polices/Roboto-Medium.ttf);
+    src: url(polices/Roboto-Medium.ttf);
 }
 @font-face {
     font-family: "Roboto-Bold";
-    src: url(/polices/Roboto-Bold.ttf);
+    src: url(polices/Roboto-Bold.ttf);
 }
+
 
 
 
@@ -100,10 +103,10 @@ $anim-delay: $anim-duration / 5;
     position: relative;
     bottom: 150px;
     height: 1700px;
-    width: 100%;
     border-radius: 50px 50px 0px 0px;
     padding-top: 20px;
     background-color: rgb(240, 240, 240);
+    width: 100%;
 }
 @mixin margin($percent){
     margin-left: $percent;
@@ -449,7 +452,7 @@ article{
             .menu__title{
                 text-transform: uppercase;
                 font-size: 20px;
-                font-family: $font-text-light;
+                font-family: "Roboto-Light";
                 margin-top: 45px;
                 /*margin-bottom: 30px;*/
                 margin-bottom: -15px;
@@ -486,10 +489,10 @@ article{
                         }
                     }
                     &:hover > .menu__text--desc{
-                        width: 250px;
+                        width: 300px;
                     }
                     &:hover > .menu__text--title{
-                        width: 250px;
+                        width: 300px;
                     }
                     .menu__price{
                         opacity: 1;
@@ -552,34 +555,17 @@ article{
     }
 }
 
+
 @keyframes text_ellipsis {
-    to{
-        
-text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap;
-    }
-    from{
-text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap;
-    }
     
 }
 
+
+
 @keyframes text_ellipsis_out {
-    to{
-text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap;
-    }
-    from{
-        
-text-overflow: ellipsis;
-overflow: hidden;
-white-space: nowrap;
-    }
+    
 }
+
 
 /* FOOTER *///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -703,9 +689,7 @@ white-space: nowrap;
 
 @media (min-width: 700px) and (max-width: 1000px){
     body{
-
         article{
-
         .restaurant{
             height: 500px;
             .restaurant__container{
@@ -843,9 +827,49 @@ white-space: nowrap;
 }
 .menu{
     height: 1000px !important;
+    .menu__card{
+        margin-right: 2% !important;
+        margin-left: 2% !important;
+    }
     .menu__desc{
-        margin-right: 50px;
-        width: 100%;
+        margin-right: 10px;
+        height: 90px !important;
+        width: 100% !important;
+        padding-left: 10px !important;
+        .menu__text{ 
+            &:hover > .menu__text--desc{
+                width: 150px !important;
+            }
+            &:hover > .menu__text--title{
+                width: 150px !important;
+            }
+            .menu__price{
+                opacity: 1;
+                font-weight: bold;
+                position: absolute;
+                right: 0px;
+                animation: price_slide_out 500ms ease-in-out forwards;
+                font-size: 16px !important;
+            }
+        }
+        .menu__text--title{
+            font-family: $font-text-light;
+            font-size: 20px !important;
+            margin-top: 20px;
+            margin-bottom: 7px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .menu__text--desc{
+            animation: text_ellipsis_out 500ms ease-in-out forwards;
+            font-size: 14px !important;
+            font-family: $font-text-light;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
     }
     .starter{
         display: flex;
