@@ -1,26 +1,4 @@
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-$color-mods:(
-    purple:$color-primary,
-    pink:$color-secondary,
-    green:$color-tertiary,
-);
-
-
-$bg-location:rgba(128, 128, 128, 0.150);
-$bg-booking:rgba(128, 128, 128, 0.075);
-$bg-footer:rgba(0, 0, 0, 0.750);
-
-
-$anim-duration: 500ms;
-$anim-delay: $anim-duration / 5;
-
-
-$font-text-light:"Roboto-Light";
-$font-text-medium:"Roboto-Medium";
-$font-text-bold:"Roboto-Bold";
-$font-title:"Shrikhand";
+@import "./Utils/variables";
 
 
 
@@ -39,113 +17,13 @@ $font-title:"Shrikhand";
 }
 
 
+
+
 * {-webkit-font-smoothing: antialiased;}
 
 
 
 
-@mixin flex_center($flex,$horizontal_center,$vertical_center,$column){
-    display: $flex;
-    justify-content: $horizontal_center;
-    align-items: $vertical_center;
-    flex-direction: $column;
-}
-@mixin number_circle{
-    position: absolute;
-    font-size: 12px;
-    left: -10px;
-    background-color: map-get($color-mods,purple);
-    border-radius: 50%;
-    line-height: 20px;                                 /* METS LE CHIFFRE A LA MEME HAUTEUR QUE LE CERCLE */
-    height: 20px;
-    width: 20px;
-    color: #fff;
-}
-@mixin card__choose{
-    box-shadow: 2px 2px 4px $bg-location;
-    font-family: $font-text-medium;
-    font-size: 13px;
-    height: 80px;
-    background-color: $bg-booking;
-    width: 85%;
-    border-radius: 22px;
-    margin-bottom: 40px;
-    text-align: center;
-    position: relative;
-}
-@mixin booking_button{
-    font-family: $font-text-medium;
-    width: 200px;
-    font-size: 15px;           
-    padding: 12px;
-    border-radius: 40px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    background: rgb(185,96,254);
-    background: linear-gradient(354deg, rgba(185,96,254,1) 25%, rgba(222,96,254,1) 50%, rgba(240,88,254,1) 75%, rgba(255,76,246,1) 100%);
-}
-@mixin restaurant__new{
-    padding: 6px 10px 6px 10px;
-    position: absolute;
-    bottom: 85%;
-    right: 5%;
-    background-color: map-get($color-mods, green);
-    color: green;
-    border-radius: 5px;
-    font-family: $font-text-medium;
-    font-size: 10px;
-}
-@mixin menu__position{
-    position: relative;
-    bottom: 150px;
-    height: 1700px;
-    border-radius: 50px 50px 0px 0px;
-    padding-top: 20px;
-    background-color: rgb(240, 240, 240);
-    width: 100%;
-}
-@mixin margin($percent){
-    margin-left: $percent;
-    margin-right: $percent;
-}
-@mixin button_shadow{                                                                       /* APPLIQUE OMBRE ET LUMIERE SUR BOUTTONS */
-    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
-    filter: brightness(110%);
-    transition-duration: 250ms;
-}
-@mixin loader_theme{
-    border: 25px solid map-get($color-mods, purple);
-    border-right: 25px solid map-get($color-mods, pink);
-    border-bottom: 25px solid map-get($color-mods, purple);
-    border-left: 25px solid map-get($color-mods, pink);
-    border-radius: 50%;
-}
-@mixin heart_fill{
-    font-weight: 900;                                
-    background-position: bottom;                                             
-    -webkit-text-fill-color: transparent;     
-    -webkit-background-clip: text;                                                           /* CIBLE L'INTERIEUR DE L'ICONE */
-    background-image: linear-gradient(to top, $color-primary 50%, transparent 50%);          /* PERMET DE REMPLIR LE BOUTON DE BAS EN HAUT */
-    background-size: 100% 200%;                                                              /* DONNE UNE TAILLE AUX DEUX COULEURS */
-    transition: background-position 0.5s ease-in-out;
-}
-@mixin menu_slide_theme{
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-    background-color: $color-tertiary;
-}
-@mixin menu_desc_theme{
-    background-color: #fff;
-    padding-left: 10px;
-    height: 85px;
-    border-radius: 17px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.300);
-    cursor: pointer;
-}
 
 
 
@@ -155,12 +33,6 @@ $font-title:"Shrikhand";
 body, html{
     margin: 0;
 }
-
-
-
-
-
-
 
 
 /* HEADER *////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
