@@ -4,7 +4,7 @@
 .about{
     height: 200px;
     background-color: $bg-footer;
-    @include flex_center(flex,"",center,"");
+    @include flex_center(flex,unset,center,unset);
     .about__list{
         list-style-type: none;
         font-size: 20px;

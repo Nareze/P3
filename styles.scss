@@ -45,7 +45,7 @@ body, html{
 
 .location{
     height: 50px;                                                  
-    @include flex_center(flex,center,center,"");
+    @include flex_center(flex,center,center,unset);
     background-color: $bg-location;
     .location__title{
         font-weight: normal;
@@ -62,7 +62,7 @@ body, html{
 
 .booking{
     height: 275px;
-    @include flex_center(flex,"",center,column);
+    @include flex_center(flex,unset,center,column);
     background-color: $bg-booking;
     .booking__title{
         font-size: 25px;
@@ -104,10 +104,10 @@ body, html{
     }
     .card__container{
         height: 400px;
-        @include flex_center(flex,"",center,column);
+        @include flex_center(flex,unset,center,column);
         .card__restaurant{
             @include card__choose;
-            @include flex_center(flex,center,center,"");
+            @include flex_center(flex,center,center,unset);
             .card__number{
                 @include number_circle;
             }
@@ -145,7 +145,7 @@ body, html{
     }
     .restaurant__container{
         height: 1400px;
-        @include flex_center(flex,"",center,column);
+        @include flex_center(flex,unset,center,column);
     }
     .restaurant__location{
         background-color: #fff;
@@ -289,7 +289,7 @@ article{
             }
             .menu__commander{
                 margin-top: 50px;
-                @include flex_center(flex, center, "","" );
+                @include flex_center(flex, center,unset ,unset);
                 .menu__button{
                     margin-top: 55px;
                     @include booking_button;
@@ -350,7 +350,7 @@ article{
         animation: expand_out 500ms ease-in-out forwards;
         transform-origin: right;
         @include menu_slide_theme;
-        @include flex_center(flex, center, center, "");
+        @include flex_center(flex, center, center, unset);
         overflow: hidden;
 
         .menu__spin{
@@ -555,7 +555,7 @@ article{
                 }
                 .card__container{
                     height: 300px;
-                    @include flex_center(flex,"",flex-start,row);
+                    @include flex_center(flex,unset,flex-start,row);
                     @include margin(5%);
                 }
                 .card__restaurant{
@@ -574,7 +574,7 @@ article{
                 }
                 .restaurant__container{
                     height: 550px;
-                    @include flex_center(flex,"",flex-start,row);
+                    @include flex_center(flex,unset,flex-start,row);
                     margin-right: 5%;
                     margin-left: 5%;
                     .restaurant__location{
@@ -621,13 +621,13 @@ article{
 
             }
             .starter{
-                @include flex_center(flex,"","",row);
+                @include flex_center(flex,unset,unset,row);
             }
             .dish{
-                @include flex_center(flex,"","",row);
+                @include flex_center(flex,unset,unset,row);
             }
             .desserts{
-                @include flex_center(flex,"","",row);
+                @include flex_center(flex,unset,unset,row);
             }
             .menu__commander{
                 margin-top: 50px;
@@ -675,7 +675,7 @@ article{
             .restaurant__container{
                     margin-right: 5%;
                     margin-left: 5%;
-                    @include flex_center(flex,"",flex-start,row);
+                    @include flex_center(flex,unset,flex-start,row);
                     height: 500px;
                 .restaurant__location{
                     margin-right: 20px;
