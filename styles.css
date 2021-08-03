@@ -456,7 +456,7 @@ body, html {
 }
 
 .banner__icon {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .banner__icon:hover {
@@ -495,14 +495,15 @@ article .menu .menu__card {
 
 article .menu .menu__card .menu__location {
   font-family: "Shrikhand";
-  font-size: 30px;
-  margin-right: 215px;
+  font-size: 18px;
   margin-bottom: 30px;
 }
 
 article .menu .menu__card .menu__location .menu__heart {
+  font-size: 21px;
   position: absolute;
   right: 5%;
+  top: 10px;
   cursor: pointer;
 }
 
@@ -523,7 +524,7 @@ article .menu .menu__card .menu__location .menu__heart:hover:before {
 
 article .menu .menu__card .menu__title {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 17px;
   font-family: "Roboto-Light";
   margin-top: 45px;
   margin-bottom: -15px;
@@ -531,7 +532,7 @@ article .menu .menu__card .menu__title {
 
 article .menu .menu__card .menu_separator {
   height: 5px;
-  width: 5%;
+  width: 55px;
   background-color: #99E2D0;
   margin-left: 0px;
   border: none;
@@ -583,9 +584,9 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   overflow: hidden;
   /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
   background-color: #fff;
-  padding-left: 20px;
-  height: 100px;
-  border-radius: 20px;
+  padding-left: 10px;
+  height: 85px;
+  border-radius: 17px;
   margin-bottom: 20px;
   -webkit-box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.3);
           box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.3);
@@ -687,7 +688,8 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   right: 0px;
   -webkit-animation: price_slide_out 500ms ease-in-out forwards;
           animation: price_slide_out 500ms ease-in-out forwards;
-  font-size: 20px;
+  font-size: 16px;
+  margin-right: -15px;
 }
 
 .menu__desc .menu__slide {
@@ -730,7 +732,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   -webkit-animation: ellipsis_out--texttitle 500ms ease-in-out;
           animation: ellipsis_out--texttitle 500ms ease-in-out;
   font-family: "Roboto-Light";
-  font-size: 25px;
+  font-size: 16px;
   margin-top: 20px;
   margin-bottom: 7px;
   white-space: nowrap;
@@ -741,7 +743,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 .menu__desc .menu__text--desc {
   -webkit-animation: ellipsis_out--textdesc 500ms ease-in-out;
           animation: ellipsis_out--textdesc 500ms ease-in-out;
-  font-size: 20px;
+  font-size: 13px;
   font-family: "Roboto-Light";
   display: inline-block;
   white-space: nowrap;
@@ -1204,19 +1206,25 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
-  /* .overlay {                                              
-            position: fixed;    
-            z-index: 5;   
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            .loader {
-                @include loader_theme;
-                width: 300px;
-                height: 300px;
-                animation: spin 3s forwards;
-            }
-        }*/
+  .overlay {
+    position: fixed;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .overlay .loader {
+    border: 25px solid #9356DC;
+    border-right: 25px solid #FF79DA;
+    border-bottom: 25px solid #9356DC;
+    border-left: 25px solid #FF79DA;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: spin 2s forwards;
+            animation: spin 2s forwards;
+  }
   .restaurant .restaurant__container {
     margin-right: 5%;
     margin-left: 5%;
@@ -1239,11 +1247,31 @@ article .menu .menu__card .menu__commander .menu__button:hover {
     margin-right: 20px;
     height: 300px;
   }
-  /*
-        @keyframes spin {
-            0% { transform: rotate(0deg);}
-            100% { transform: rotate(360deg); opacity: 0; position: absolute; left: 5000px;}
-        }
-*/
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+      opacity: 0;
+      position: absolute;
+      left: 5000px;
+    }
+  }
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+      opacity: 0;
+      position: absolute;
+      left: 5000px;
+    }
+  }
 }
 /*# sourceMappingURL=styles.css.map */
