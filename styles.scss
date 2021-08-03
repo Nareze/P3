@@ -82,10 +82,6 @@ body, html{
         &:hover{
             @include button_shadow;
         }
-        a{
-            color: inherit;
-            text-decoration: none;
-        }
     }
 }
 
