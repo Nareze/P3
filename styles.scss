@@ -550,7 +550,6 @@ article{
             right: 0px;
             animation: price_slide_out 500ms ease-in-out forwards;
             font-size: 16px;
-            margin-right: -15px;
         }
     }
     .menu__slide{
@@ -680,7 +679,7 @@ article{
 
 @keyframes ellipsis--textdesc {
     to{
-        width: 250px;
+        /*width: 250px;*/ width: 100px;
 
     }
     from {
@@ -692,13 +691,13 @@ article{
         width: 350px;
     }
     from {
-        width: 250px;
+        width: 100px;
     }
     
 }
 @keyframes ellipsis--texttitle {
     to{
-        width: 250px;
+        width: 100px;
     }
     from {
         width: 350px;
@@ -710,7 +709,7 @@ article{
         width: 350px;
     }
     from {
-        width: 250px;
+        width: 100px;
     }
 }
 
@@ -899,8 +898,8 @@ article{
             transform: translate(-50%, -50%); 
             .loader {
                 @include loader_theme;
-                width: 300px;
-                height: 300px;
+                width: 250px;
+                height: 250px;
                 animation: spin 2s forwards;
             }
         }
