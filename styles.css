@@ -204,6 +204,11 @@ body, html {
           transition-duration: 250ms;
 }
 
+.booking .booking__button a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* ARTICLE */
 .card {
   background-color: #fff;
@@ -485,7 +490,7 @@ article {
 article .menu {
   position: relative;
   bottom: 150px;
-  height: 1700px;
+  height: 1500px;
   border-radius: 50px 50px 0px 0px;
   padding-top: 20px;
   background-color: #f0f0f0;
@@ -1052,7 +1057,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
     font-size: 19px;
   }
   body article .card .card__container {
-    height: 250px;
+    height: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1082,7 +1087,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
     font-size: 19px;
   }
   body article .restaurant .restaurant__container {
-    height: 500px;
+    height: 550px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1124,7 +1129,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   }
   body .menu .menu__desc {
     margin-right: 25px;
-    height: 100px !important;
+    height: 90px !important;
     width: 100% !important;
     padding-left: 10px !important;
   }
@@ -1132,11 +1137,13 @@ article .menu .menu__card .menu__commander .menu__button:hover {
     font-size: 18px !important;
   }
   body .menu .menu__desc .menu__text--desc {
-    font-size: 16px !important;
+    margin-top: 4px;
+    font-size: 13px !important;
   }
   body .menu .menu__desc .menu__price {
     font-size: 16px !important;
-    display: block;
+    margin-top: 3px;
+    margin-right: -5px;
   }
   body .menu .starter {
     display: -webkit-box;

@@ -10,6 +10,8 @@
 }
 
 
+
+
 @mixin number_circle{
     position: absolute;
     font-size: 12px;
@@ -63,10 +65,12 @@
 }
 
 
+
+
 @mixin menu__position{
     position: relative;
     bottom: 150px;
-    height: 1700px;
+    height: 1500px;
     border-radius: 50px 50px 0px 0px;
     padding-top: 20px;
     background-color: rgb(240, 240, 240);
