@@ -37,6 +37,7 @@
 }
 @mixin booking_button{
     font-family: $font-text-medium;
+    text-align: center;
     width: 200px;
     font-size: 15px;           
     padding: 12px;
@@ -110,6 +111,6 @@
 }
 @mixin ellipsis{
     text-overflow: ellipsis;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
 }

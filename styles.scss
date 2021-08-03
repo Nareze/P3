@@ -77,6 +77,10 @@ body, html{
         text-align: center;
         font-family: $font-text-light;
     }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
     .booking__button{
         @include booking_button;
         &:hover{
@@ -307,7 +311,7 @@ article{
 
 .menu__desc{ 
     margin-top: 25px;
-    overflow: hidden;                                                       /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
+    overflow: hidden;                  /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
     @include menu_desc_theme;
     position: relative;
     animation: menu_fade $anim-duration forwards ease-in-out;
@@ -330,9 +334,7 @@ article{
             }
         }
         &:hover > .menu__text--desc{
-            animation: ellipsis--textdesc 500ms ease-in-out forwards;
-            
-            
+            animation: ellipsis--textdesc 500ms ease-in-out forwards; 
         }
         &:hover > .menu__text--title{
             animation: ellipsis--texttitle 500ms ease-in-out forwards;
@@ -352,7 +354,6 @@ article{
         @include menu_slide_theme;
         @include flex_center(flex, center, center, unset);
         overflow: hidden;
-
         .menu__spin{
             animation: icon_spin_out 500ms ease-in-out forwards;
             font-size: 30px;
@@ -397,6 +398,8 @@ article{
         opacity: 1;
     }
 }
+
+
 @keyframes expand {
     from {
         height: 100%;
@@ -455,41 +458,48 @@ article{
     }
 }
 
+
 @keyframes ellipsis--textdesc {
     to{
-        width: 100px;
+        width: 140px;
 
     }
     from {
-        width: 350px;
+        width: 220px;
     }
 }
 @keyframes ellipsis_out--textdesc {
     to{
-        width: 350px;
+        width: 220px;
     }
     from {
-        width: 100px;
+        width: 140px;
     }
     
 }
 @keyframes ellipsis--texttitle {
     to{
-        width: 100px;
+        width: 140px;
     }
     from {
-        width: 350px;
+        width: 220px;
     }
     
 }
 @keyframes ellipsis_out--texttitle {
     to{
-        width: 350px;
+        width: 220px;
     }
     from {
-        width: 100px;
+        width: 140px;
     }
 }
+
+
+
+
+
+
 
 
 
