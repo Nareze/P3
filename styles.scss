@@ -44,7 +44,7 @@ body, html{
 
 
 .location{
-    height: 50px;                                                  
+    height: 50px;                                              
     @include flex_center(flex,center,center,unset);
     background-color: $bg-location;
     .location__title{
@@ -83,6 +83,7 @@ body, html{
     }
     .booking__button{
         @include booking_button;
+        transition: 300ms ease-in-out;
         &:hover{
             @include button_shadow;
         }
@@ -158,6 +159,7 @@ body, html{
         margin-bottom: 30px;
         position: relative;
         width: 85%;
+        transition: 300ms ease-in-out;
         .restaurant__heart{
             position: absolute;
             left: 85%;
@@ -311,7 +313,7 @@ article{
 
 .menu__desc{ 
     margin-top: 25px;
-    overflow: hidden;                  /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
+    overflow: hidden;               /* PERMET DE CONTENIR LA COULEUR ET L'ICONE DANS LE BLOC PARENT */
     @include menu_desc_theme;
     position: relative;
     animation: menu_fade $anim-duration forwards ease-in-out;
@@ -475,7 +477,6 @@ article{
     from {
         width: 140px;
     }
-    
 }
 @keyframes ellipsis--texttitle {
     to{
@@ -484,7 +485,6 @@ article{
     from {
         width: 220px;
     }
-    
 }
 @keyframes ellipsis_out--texttitle {
     to{

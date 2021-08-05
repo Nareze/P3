@@ -51,7 +51,6 @@
 @mixin button_shadow{                                                                       /* APPLIQUE OMBRE ET LUMIERE SUR BOUTTONS */
     box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
     filter: brightness(110%);
-    transition-duration: 250ms;
 }
 @mixin restaurant__new{
     padding: 6px 10px 6px 10px;

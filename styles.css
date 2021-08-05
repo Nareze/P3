@@ -198,6 +198,8 @@ body, html {
   cursor: pointer;
   background: #b960fe;
   background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .booking .booking__button:hover {
@@ -206,8 +208,6 @@ body, html {
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
 }
 
 /* ARTICLE */
@@ -297,8 +297,6 @@ body, html {
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
 }
 
 .card .card__container div:last-child {
@@ -341,6 +339,8 @@ body, html {
   margin-bottom: 30px;
   position: relative;
   width: 85%;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 .restaurant .restaurant__location .restaurant__heart {
@@ -412,8 +412,6 @@ body, html {
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
 }
 
 /* LOADING SPINNER */
@@ -587,8 +585,6 @@ article .menu .menu__card .menu__commander .menu__button:hover {
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
 }
 
 .menu__desc {
@@ -768,8 +764,6 @@ article .menu .menu__card .menu__commander .menu__button:hover {
           box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.295);
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
-  -webkit-transition-duration: 250ms;
-          transition-duration: 250ms;
 }
 
 /* KEY FRAMES */
