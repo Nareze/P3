@@ -318,7 +318,7 @@ article{
     position: relative;
     animation: menu_fade $anim-duration forwards ease-in-out;
     opacity: 0;
-        @for $i from 1 to 10 {                                               /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+        @for $i from 1 to 11 {                                               /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
             &--#{$i}{
                 animation-delay: $anim-delay*$i;
             }

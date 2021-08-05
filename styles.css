@@ -612,6 +612,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
   /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
   /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
 }
 
 .menu__desc--1 {
@@ -657,6 +658,11 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 .menu__desc--9 {
   -webkit-animation-delay: 900ms;
           animation-delay: 900ms;
+}
+
+.menu__desc--10 {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 
 .menu__desc .menu__text:hover > .menu__price {
