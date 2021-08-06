@@ -1,47 +1,40 @@
-/* FOOTER *////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* FOOTER */ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-.about{
-    height: 200px;
-    background-color: $bg-footer;
-    @include flex_center(flex,unset,center,unset);
-    .about__list{
-        list-style-type: none;
-        font-size: 20px;
-        color: #fff;
-        li:first-child{
-            font-family: $font-title;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        li:not(:first-child){
-            margin-bottom: 5px;
-            font-family: $font-text-medium;
-        }
-        .about__icon{
-            font-size: 15px;
-            margin-right: 20px;
-        }
-        li{
-            &:hover{
-                cursor: pointer;
-            }
-        }
-        a{
-            color: inherit;
-            text-decoration: none;
-        }
+.about {
+  height: 200px;
+  background-color: $bg-footer;
+  @include flex_center(flex, unset, center, unset);
+  .about__list {
+    list-style-type: none;
+    font-size: 20px;
+    color: #fff;
+    li:first-child {
+      font-family: $font-title;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
+    li:not(:first-child) {
+      margin-bottom: 5px;
+      font-family: $font-text-medium;
+    }
+    .about__icon {
+      font-size: 15px;
+      margin-right: 20px;
+    }
+    li {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
 }
 
+/* PAGES ANNEXES */ //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-/* PAGES ANNEXES *///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-.about--shift{
-    margin-top: -150px;
+.about--shift {
+  margin-top: -150px;
 }

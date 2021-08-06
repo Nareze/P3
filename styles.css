@@ -113,8 +113,11 @@
   -webkit-font-smoothing: antialiased;
 }
 
-body, html {
+body,
+html {
   margin: 0;
+  max-width: 2560px;
+  margin: auto;
 }
 
 /* NAV */
@@ -577,6 +580,8 @@ article .menu .menu__card .menu__commander .menu__button {
   cursor: pointer;
   background: #b960fe;
   background: linear-gradient(354deg, #b960fe 25%, #de60fe 50%, #f058fe 75%, #ff4cf6 100%);
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 article .menu .menu__card .menu__commander .menu__button:hover {
