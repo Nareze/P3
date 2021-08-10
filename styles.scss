@@ -23,9 +23,8 @@
 
 body,
 html {
-  margin: 0;
-  max-width: 2560px;
-  margin: auto;
+  margin: 0 auto;
+  max-width: 2000px;
 }
 
 /* NAV */ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -142,7 +141,7 @@ html {
       bottom: 20px;
       font-size: 16px;
       cursor: pointer;
-      &:hover:before {
+      &:hover {
         @include heart_fill;
       }
     }
@@ -237,7 +236,7 @@ article {
           right: 5%;
           top: 10px;
           cursor: pointer;
-          &:hover:before {
+          &:hover {
             @include heart_fill;
           }
         }
