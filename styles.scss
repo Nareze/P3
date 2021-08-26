@@ -279,40 +279,29 @@ article {
   animation: menu_fade $anim-duration forwards ease-in-out;
   opacity: 0;
   @for $i from 1 to 11 {
-    /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
     &--#{$i} {
       animation-delay: $anim-delay * $i;
     }
   }
-  .menu__text {
-    &:hover > .menu__price {
-      /* SELECTIONNE UN ELEMENT ENFANT DE LA DIV */
-      animation: price_slide 500ms ease-in-out forwards;
-    }
-    &:hover + .menu__slide {
-      /* SELECTIONNE LA DIV ADJACENTE POUR APPLIQUER L'ANIMATION */
-      opacity: 1;
-      animation: expand 500ms ease-in-out forwards;
-      .menu__spin {
-        animation: icon_spin 500ms ease-in-out forwards;
-        transform: rotate(0deg);
-      }
-    }
-    &:hover > .menu__text--desc {
-      animation: ellipsis--textdesc 500ms ease-in-out forwards;
-    }
-    &:hover > .menu__text--title {
-      animation: ellipsis--texttitle 500ms ease-in-out forwards;
-    }
-    .menu__price {
-      opacity: 1;
-      font-weight: bold;
-      position: absolute;
-      right: 0px;
-      animation: price_slide_out 500ms ease-in-out forwards;
-      font-size: 16px;
+  &:hover > .menu__slide {
+    opacity: 1;
+    animation: expand 500ms ease-in-out forwards;
+    .menu__spin {
+      animation: icon_spin 500ms ease-in-out forwards;
+      transform: rotate(0deg);
     }
   }
+  &:hover .menu__price {
+      animation: price_slide 500ms ease-in-out forwards;
+  }
+  &:hover .menu__text--desc {
+    animation: ellipsis--textdesc 500ms ease-in-out forwards;
+  }
+  &:hover .menu__text--title {
+    animation: ellipsis--texttitle 500ms ease-in-out forwards;
+  }
+
+  /* animations retours : */
   .menu__slide {
     animation: expand_out 500ms ease-in-out forwards;
     transform-origin: right;
@@ -326,6 +315,12 @@ article {
     .fa-check-circle {
       color: white;
     }
+  }
+  .menu__price {
+    opacity: 1;
+    font-weight: bold;
+    animation: price_slide_out 500ms ease-in-out forwards;
+    font-size: 16px;
   }
   .menu__text--title {
     animation: ellipsis_out--texttitle 500ms ease-in-out;
@@ -366,19 +361,18 @@ article {
   }
   to {
     height: 100%;
-    width: 90px;
+    width: 80px;
     border-radius: 0px;
   }
 }
 @keyframes expand_out {
   from {
     height: 100%;
-    width: 100px;
+    width: 80px;
     border-radius: 0px;
   }
   to {
     height: 100%;
-    width: 0px;
     width: 0px;
     border-radius: 0px;
   }
@@ -386,21 +380,21 @@ article {
 @keyframes price_slide {
   from {
     position: absolute;
-    right: 30px;
+    right: 25px;
   }
   to {
     position: absolute;
-    right: 105px;
+    right: 100px;
   }
 }
 @keyframes price_slide_out {
   from {
     position: absolute;
-    right: 105px;
+    right: 100px;
   }
   to {
     position: absolute;
-    right: 30px;
+    right: 25px;
   }
 }
 @keyframes icon_spin {

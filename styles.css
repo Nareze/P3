@@ -605,16 +605,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   -webkit-animation: menu_fade 500ms forwards ease-in-out;
           animation: menu_fade 500ms forwards ease-in-out;
   opacity: 0;
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
-  /* LA BOUCLE ITERE SUR CHAQUE ELEMENTS AVEC UN DECALAGE */
+  /* animations retours : */
 }
 
 .menu__desc--1 {
@@ -667,44 +658,32 @@ article .menu .menu__card .menu__commander .menu__button:hover {
           animation-delay: 1000ms;
 }
 
-.menu__desc .menu__text:hover > .menu__price {
-  /* SELECTIONNE UN ELEMENT ENFANT DE LA DIV */
-  -webkit-animation: price_slide 500ms ease-in-out forwards;
-          animation: price_slide 500ms ease-in-out forwards;
-}
-
-.menu__desc .menu__text:hover + .menu__slide {
-  /* SELECTIONNE LA DIV ADJACENTE POUR APPLIQUER L'ANIMATION */
+.menu__desc:hover > .menu__slide {
   opacity: 1;
   -webkit-animation: expand 500ms ease-in-out forwards;
           animation: expand 500ms ease-in-out forwards;
 }
 
-.menu__desc .menu__text:hover + .menu__slide .menu__spin {
+.menu__desc:hover > .menu__slide .menu__spin {
   -webkit-animation: icon_spin 500ms ease-in-out forwards;
           animation: icon_spin 500ms ease-in-out forwards;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
 
-.menu__desc .menu__text:hover > .menu__text--desc {
+.menu__desc:hover .menu__price {
+  -webkit-animation: price_slide 500ms ease-in-out forwards;
+          animation: price_slide 500ms ease-in-out forwards;
+}
+
+.menu__desc:hover .menu__text--desc {
   -webkit-animation: ellipsis--textdesc 500ms ease-in-out forwards;
           animation: ellipsis--textdesc 500ms ease-in-out forwards;
 }
 
-.menu__desc .menu__text:hover > .menu__text--title {
+.menu__desc:hover .menu__text--title {
   -webkit-animation: ellipsis--texttitle 500ms ease-in-out forwards;
           animation: ellipsis--texttitle 500ms ease-in-out forwards;
-}
-
-.menu__desc .menu__text .menu__price {
-  opacity: 1;
-  font-weight: bold;
-  position: absolute;
-  right: 0px;
-  -webkit-animation: price_slide_out 500ms ease-in-out forwards;
-          animation: price_slide_out 500ms ease-in-out forwards;
-  font-size: 16px;
 }
 
 .menu__desc .menu__slide {
@@ -741,6 +720,14 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 
 .menu__desc .menu__slide .fa-check-circle {
   color: white;
+}
+
+.menu__desc .menu__price {
+  opacity: 1;
+  font-weight: bold;
+  -webkit-animation: price_slide_out 500ms ease-in-out forwards;
+          animation: price_slide_out 500ms ease-in-out forwards;
+  font-size: 16px;
 }
 
 .menu__desc .menu__text--title {
@@ -800,7 +787,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   }
   to {
     height: 100%;
-    width: 90px;
+    width: 80px;
     border-radius: 0px;
   }
 }
@@ -813,7 +800,7 @@ article .menu .menu__card .menu__commander .menu__button:hover {
   }
   to {
     height: 100%;
-    width: 90px;
+    width: 80px;
     border-radius: 0px;
   }
 }
@@ -821,12 +808,11 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 @-webkit-keyframes expand_out {
   from {
     height: 100%;
-    width: 100px;
+    width: 80px;
     border-radius: 0px;
   }
   to {
     height: 100%;
-    width: 0px;
     width: 0px;
     border-radius: 0px;
   }
@@ -835,12 +821,11 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 @keyframes expand_out {
   from {
     height: 100%;
-    width: 100px;
+    width: 80px;
     border-radius: 0px;
   }
   to {
     height: 100%;
-    width: 0px;
     width: 0px;
     border-radius: 0px;
   }
@@ -849,44 +834,44 @@ article .menu .menu__card .menu__commander .menu__button:hover {
 @-webkit-keyframes price_slide {
   from {
     position: absolute;
-    right: 30px;
+    right: 25px;
   }
   to {
     position: absolute;
-    right: 105px;
+    right: 100px;
   }
 }
 
 @keyframes price_slide {
   from {
     position: absolute;
-    right: 30px;
+    right: 25px;
   }
   to {
     position: absolute;
-    right: 105px;
+    right: 100px;
   }
 }
 
 @-webkit-keyframes price_slide_out {
   from {
     position: absolute;
-    right: 105px;
+    right: 100px;
   }
   to {
     position: absolute;
-    right: 30px;
+    right: 25px;
   }
 }
 
 @keyframes price_slide_out {
   from {
     position: absolute;
-    right: 105px;
+    right: 100px;
   }
   to {
     position: absolute;
-    right: 30px;
+    right: 25px;
   }
 }
 
